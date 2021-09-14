@@ -1,32 +1,37 @@
-/* voeg voor de font-face ook andere bestandtypen toe, zie coding tools.*/
-@font-face {
-  font-family: sport;
-  src: url('./fonts/sport.ttf');
-}
-
-header {
+div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 h1 {
-  font-family: sport;
-  color: rgb(0, 195, 255);
-  text-shadow: 2px 2px 2px white;
-  font-size: calc(15px + 8vmin);
+  color: rgb(53 208 255);
+  text-shadow: 1px 1px 1px rgb(202, 192, 192);
+  font-size: calc(12px + 6vmin);
+  text-align: center;
+
 }
 
 p {
   color: white;
   font-size: calc(10px + 1.5vmin);
   text-align: center;
-  margin-left: 1em;
-  margin-right: 2em;
 }
 
 button {
-  margin-top: 25vmin;
+  position: absolute;
+  top: 50%;
+  background: linear-gradient(210deg, rgb(0, 195, 255), rgb(94 217 255), rgb(153 231 255));
+  height: calc(40px + 4.5vmin);
+  width: calc(65px + 12vmin);
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px black;
+  border: 2px solid white;
   cursor: pointer;
+  font-size: calc(10px + 2vmin);
 }
