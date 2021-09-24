@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
 
 body {
   position: relative;
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Gemunu Libre', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(37,38,44);
@@ -11,11 +11,6 @@ body {
 
 .introButtonEen:hover, .introButtonTwee:hover {
   border: 3px solid #d8d5d5;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 /* footer {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import crunch from './images/crunch3.jpg';
+import crunch from './images/crunch3-test.jpg';
 
 
 // voor yt vids gebruik dit kanaal > https://www.youtube.com/watch?v=6ZJbSZNe370&ab_channel=Sportzorg
@@ -12,7 +12,7 @@ function App() {
       <button className="home">
       home
       </button>
-      <div>
+      <div className="headerText">
         <h1>
           Fitnessoefeningen voor thuis
         </h1>
@@ -22,6 +22,7 @@ function App() {
       </div>
       </header> 
       <section className="start">
+        <div className="animation"></div>
       <p>
         Opzoek naar oefeningen waarmee jij vandaag het beste uit jezelf haalt?
       </p>
@@ -30,6 +31,7 @@ function App() {
       </button>
       </section>
       <section className="saved">
+      <div className="animationTwee"></div>
       <p>
         Eerder deze website bezocht? Bekijk jouw meest recente oefeningen!
       </p>
@@ -38,7 +40,7 @@ function App() {
       </button>
       </section>
       <section className="image">
-        <img src={crunch}/>
+
       </section>
     </div>
   );
