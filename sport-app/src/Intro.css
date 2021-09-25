@@ -19,7 +19,7 @@ header {
   cursor: pointer;
   padding: 8px;
   border-radius: 0.3em;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   font-weight: bold;
 }
 
@@ -57,7 +57,6 @@ p {
 
 .introButtonTwee {
   animation-delay: 1.8s;
-
 }
 
 @keyframes buttonsOpacity {
@@ -127,11 +126,10 @@ section {
     opacity: 0;
   }
   25% {
-   
     opacity: 0;
   }
   50% {
-    
+    transform: translateY(50%);
     opacity: 0;
   }
   65% {
@@ -179,7 +177,6 @@ section {
 
 .animationTwee {
   animation-delay: 1.8s;
-  animation-duration: 1.4s;
 }
 
 @keyframes slideIn {
@@ -228,6 +225,10 @@ img {
   header {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+  }
+
+  .headerText {
+    margin-right: 3em;
   }
 
   .start {

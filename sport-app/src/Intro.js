@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
-import crunch from './images/crunch3-test.jpg';
-
-
+import './Intro.css';
 // voor yt vids gebruik dit kanaal > https://www.youtube.com/watch?v=6ZJbSZNe370&ab_channel=Sportzorg
 
-function App() {
+class Intro extends React.Component {
+
+  render() {
   return (
     <div className="fullPage">
       <header>
@@ -43,7 +42,7 @@ function App() {
 
       </section>
     </div>
-  );
+  );}
 }
 
-export default App;
+export default Intro;

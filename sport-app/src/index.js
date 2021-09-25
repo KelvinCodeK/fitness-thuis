@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Intro from './Intro';
+import Energy from './Energy';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Energy />
     {/* <footer>
       <p>
         De oefeningen zijn bedoeld voor mensen zonder lichamelijke klachten. Twijfel je of je een oefening aankan? Vraag advies aan je fysiotherapeut of arts.
