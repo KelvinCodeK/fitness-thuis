@@ -16,7 +16,7 @@ class Intro extends React.Component {
           Fitnessoefeningen voor thuis
         </h1>
         <p>
-        Ideale thuisoefeningen geselecteerd op inpsanning en spiergroepen
+        Ideale thuisoefeningen geselecteerd op inspanning en spiergroepen
       </p>
       </div>
       </header> 

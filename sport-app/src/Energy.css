@@ -1,8 +1,18 @@
 .slideSection {
     display: flex;
     align-items: center;
-    height: calc(200px + 20vmin);
+    height: calc(200px + 45vmin);
     justify-content: space-around;
+}
+
+.slideSection > button{
+  opacity: 1;
+  animation: none;
+  margin: 0px;
+}
+
+span {
+  color: rgb(94 217 255);
 }
 
 .slideSection > p {
@@ -12,34 +22,87 @@
   font-weight: initial;
 }
 
+.niveau {
+  border-left: 1px solid white;
+  padding: 3px;
+  border-bottom: 1px solid white;
+}
+
 .slidecontainer {
-    width: 50%;
+    width: calc(50px + 25vmin);
+    position: relative;
   }
   
   .slider {
     -webkit-appearance: none;
+    -moz-appearance:initial;
     width: 100%;
-    height: calc(10px + 1vmin);
-    background: #d3d3d3;
+    height: calc(5px + 0.5vmin);
+    background: white;
     outline: none;
     border-radius: 20px;
+    cursor: pointer;
   }
   
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     height: calc(15px + 1.1vmin);
-    width: calc(15px + 1.1vmin);
-    background: #04AA6D;
+    width: calc(10px + 0.5vmin);
+    background: rgb(94 217 255);
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px #000000;
   }
   
   .slider::-moz-range-thumb {
     -moz-appearance: none;
-    height: calc(20px + 1vmin);
-    width: calc(20px + 1vmin);
-    background: #04AA6D;
+    height: calc(15px + 1.1vmin);
+    width: calc(10px + 0.5vmin);
+    background: rgb(94 217 255);
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px #000000;
+  }
+
+  .forFirefox::before {
+    background-image: url('./images/veryTiredSmall.png');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: calc(-17px + -3vmin);
+    top: calc(-20px + -3vmin);
+    height: calc(20px + 3vmin);
+    width: calc(20px + 3vmin);
+    content: "";
+  }
+
+  .forFirefox::after {
+    background-image: url('./images/highEnergySmall.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: calc(-17px + -3vmin);
+    top: calc(-20px + -3vmin);
+    height: calc(20px + 3vmin);
+    width: calc(20px + 3vmin);
+    content: "";
+  }
+
+  .energy {
+    height: calc(50px + 10vmin);
+    width: calc(50px + 10vmin);
+  }
+
+  datalist {
+    color: white;
+    display: inherit;
+  }
+
+  option {
+    border: 1px solid white;
+    display: initial;
   }

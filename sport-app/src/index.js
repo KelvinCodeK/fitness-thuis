@@ -3,29 +3,56 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Intro from './Intro';
 import Energy from './Energy';
+import veryTired from './images/veryTired.png';
+import tired from './images/tired.png';
+import neutral from './images/neutral.png';
+import goodEnergy from './images/goodEnergy.png';
+import highEnergy from './images/highEnergy.png';
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      energyLeft: 0.5,
-      energyRight: 0.5
-    };
+     energyLevel: neutral,
+     energyPara: 'prima'
+    }
     this.energy = this.energy.bind(this);
   }
 
   energy(event) {
-    if(event.target.value < 0.5) {
-      this.setState(state => ({energyLeft: state.energyLeft + 0.1}));
-    }
-    else {
-      this.setState({energyRight: event.target.value});
-    }
+    const level = Number(event.target.value);
+    
+    switch(true) {
+    case level <= 50 && level >= 0:
+      this.setState({energyLevel: veryTired});
+      this.setState({energyPara: 'uitgeput'});
+      break;
+    case level <= 100 && level > 50:
+      this.setState({energyLevel: tired});
+      this.setState({energyPara: 'zwakjes'});
+      break;
+    case level <= 200 && level > 100:
+      this.setState({energyLevel: neutral});
+      this.setState({energyPara: 'prima'});
+      break;
+    case level <= 350 && level > 200:
+      this.setState({energyLevel: goodEnergy});
+      this.setState({energyPara: 'fit'});
+      break;
+    case level <= 400 && level > 350:
+      this.setState({energyLevel: highEnergy});
+      this.setState({energyPara: 'knallen!'});
+      break;
+    default:
+      this.setState({energyLevel: neutral});
+      this.setState({energyPara: 'prima'});
+  }
+
   }
   
   render() {
     return (
-      <Energy energyLevelLeft={this.state.energyLeft} energyLevelLeft={this.state.energyLeft} energyFunc={this.energy}/>
+      <Energy energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} />
     )
   }
 }
