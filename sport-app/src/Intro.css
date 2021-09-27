@@ -6,7 +6,7 @@
 }
 
 header {
-  padding: 1em;
+  padding: 0.5em;
   grid-row: 1 / 2;
   background-color: white;
   border-bottom: calc(2px + 1vmin) solid #d8d5d5;
@@ -93,8 +93,8 @@ section {
   border-left: 6px solid #d8d5d5;
   position: relative;
   border-radius: 13px;
-  padding: 0.4em;
-  margin-right: 1em;
+  padding: 0.2em;
+  margin-right: calc(15px + 5vmin);
 }
 
 .saved {
@@ -102,11 +102,11 @@ section {
   border-left: 6px solid #d8d5d5;
   position: relative;
   border-radius: 13px;
-  padding: 0.4em;
-  margin-right: 1em;
+  padding: 0.2em;
+  margin-right: calc(15px + 5vmin);
 }
 
-.start > p, .saved > p {
+.start > p, .saved > p, .niveau {
   transform: translateY(100%);
   opacity: 0;
   animation-name: slideInPara;

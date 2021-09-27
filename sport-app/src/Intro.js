@@ -25,7 +25,7 @@ class Intro extends React.Component {
       <p>
         Opzoek naar oefeningen waarmee jij vandaag het beste uit jezelf haalt?
       </p>
-      <button className="introButtonEen">
+      <button onClick={this.props.toEnergy} className="introButtonEen">
         start
       </button>
       </section>

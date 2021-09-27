@@ -13,10 +13,21 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+     introToEnergy: false,
      energyLevel: neutral,
      energyPara: 'prima'
     }
     this.energy = this.energy.bind(this);
+    this.toEnergy = this.toEnergy.bind(this);
+    this.home = this.home.bind(this);
+  }
+
+  home() {
+    this.setState({introToEnergy: false});
+  }
+
+  toEnergy() {
+    this.setState({introToEnergy: true});
   }
 
   energy(event) {
@@ -27,15 +38,15 @@ class Index extends React.Component {
       this.setState({energyLevel: veryTired});
       this.setState({energyPara: 'uitgeput'});
       break;
-    case level <= 100 && level > 50:
+    case level <= 150 && level > 50:
       this.setState({energyLevel: tired});
       this.setState({energyPara: 'zwakjes'});
       break;
-    case level <= 200 && level > 100:
+    case level <= 200 && level > 150:
       this.setState({energyLevel: neutral});
       this.setState({energyPara: 'prima'});
       break;
-    case level <= 350 && level > 200:
+    case level <= 350 && level > 250:
       this.setState({energyLevel: goodEnergy});
       this.setState({energyPara: 'fit'});
       break;
@@ -51,8 +62,10 @@ class Index extends React.Component {
   }
   
   render() {
-    return (
-      <Energy energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} />
+    return (<div>
+      {this.state.introToEnergy ? null : <Intro toEnergy={this.toEnergy} />}
+      {this.state.introToEnergy ? <Energy home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
+      </div>
     )
   }
 }

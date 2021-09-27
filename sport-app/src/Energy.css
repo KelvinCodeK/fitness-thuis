@@ -26,6 +26,7 @@ span {
   border-left: 1px solid white;
   padding: 3px;
   border-bottom: 1px solid white;
+  animation-duration: 1s;
 }
 
 .slidecontainer {
