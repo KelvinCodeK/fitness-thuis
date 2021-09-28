@@ -20,16 +20,16 @@ class Energy extends React.Component {
       </p>
       </div>
       </header>
-      <section className="slideSection">
+      <section className="centeredSection">
         <img className="energy" alt="Emoticon die weergeeft hoeveel energie jij vandaag hebt" src={this.props.energySmiley} />
         <p>
-          Wat is jouw energieniveau vandaag?
+          Wat is jouw <span>energieniveau</span> vandaag?
         </p>
         <div className="slidecontainer">
         <span className="forFirefox"><input type={"range"} min={0} max={400} defaultValue={200} step={10} onChange={this.props.energyLevel} className="slider" /></span>
         </div>
         <p className="niveau">Niveau: <span>{this.props.currentEnergy}</span></p>
-        <button className="introButtonEen">next</button>
+        <button onClick={this.props.energyToSpiergroepen} className="introButtonEen">next</button>
       </section>
     </div>
   );}

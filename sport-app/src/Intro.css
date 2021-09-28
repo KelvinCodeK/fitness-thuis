@@ -35,9 +35,8 @@ h1 {
 
 p {
   color: black;
-  font-size: calc(7px + 1.2vmin);
+  font-size: calc(7px + 1.3vmin);
   text-align: center;
-  font-weight: bold;
 }
 
 .headerText {
@@ -48,6 +47,20 @@ p {
 }
 
 .introButtonEen, .introButtonTwee {
+  background: linear-gradient(326deg, #ea0000, rgb(94 217 255));
+  margin-top: calc(1px + 6vmin);
+  height: calc(25px + 4vmin);
+  width: calc(45px + 8vmin);
+  font-size: calc(6px + 1.5vmin);
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px black;
+  border: 2px solid #d8d5d5;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  margin-bottom: 2vmin;
   opacity: 0;
   animation-name: buttonsOpacity;
   animation-duration: 2s;
@@ -106,7 +119,7 @@ section {
   margin-right: calc(15px + 5vmin);
 }
 
-.start > p, .saved > p, .niveau {
+.start > p, .saved > p {
   transform: translateY(100%);
   opacity: 0;
   animation-name: slideInPara;
@@ -139,23 +152,6 @@ section {
     transform: translateY(0%);
     opacity: 1;
   }
-}
-
-.introButtonEen, .introButtonTwee {
-  background: linear-gradient(326deg, #ea0000, rgb(94 217 255));
-  margin-top: calc(5px + 6vmin);
-  height: calc(25px + 4vmin);
-  width: calc(45px + 8vmin);
-  font-size: calc(6px + 1.5vmin);
-  font-weight: bold;
-  text-shadow: 1px 1px 1px black;
-  color: white;
-  border-radius: 15px;
-  box-shadow: 3px 3px 6px black;
-  border: 2px solid #d8d5d5;
-  cursor: pointer;
-  transition: all 0.1s ease;
-  margin-bottom: 2vmin;
 }
 
 .introButtonTwee {

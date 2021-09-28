@@ -1,0 +1,32 @@
+.spiergroepenPara {
+    border-left: 1px solid white;
+    padding: 3px;
+    border-bottom: 1px solid white;
+}
+
+label {
+    color: white;
+}
+
+.checkboxContainer {
+    height: calc(100px + 15vmin);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+label {
+    font-size: calc(7px + 1.3vmin);
+}
+
+input[type="checkbox"  i] {
+    height: calc(7px + 1vmin);
+    width: calc(7px + 1vmin);
+    margin: 0px;
+    margin-right: calc(2px + 1vmin);
+}
+
+.checkboxDiv {
+    display: flex;
+    align-items: center;
+}

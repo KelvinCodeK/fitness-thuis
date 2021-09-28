@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Intro from './Intro';
 import Energy from './Energy';
+import Spiergroepen from './Spiergroepen';
 import veryTired from './images/veryTired.png';
 import tired from './images/tired.png';
 import neutral from './images/neutral.png';
@@ -14,20 +15,43 @@ class Index extends React.Component {
     super(props);
     this.state = {
      introToEnergy: false,
+     energyToSpiergroepen: false,
      energyLevel: neutral,
-     energyPara: 'prima'
+     energyPara: 'prima',
+     spiergroepen: []
     }
     this.energy = this.energy.bind(this);
     this.toEnergy = this.toEnergy.bind(this);
     this.home = this.home.bind(this);
+    this.toSpiergroepen = this.toSpiergroepen.bind(this);
+    this.spiergroepenChecked = this.spiergroepenChecked.bind(this);
   }
 
   home() {
-    this.setState({introToEnergy: false});
+    this.setState({introToEnergy: false, energyToSpiergroepen: false, spiergroepen: []});
+    
   }
 
   toEnergy() {
     this.setState({introToEnergy: true});
+  }
+
+  toSpiergroepen() {
+    this.setState({introToEnergy: false, energyToSpiergroepen: true});
+  }
+
+  spiergroepenChecked(event) {
+    const val = event.target.value;
+    const arr = this.state.spiergroepen;
+    if(!arr.includes(val)) {
+      arr.push(val);
+      this.setState({spiergroepen: arr})
+    }
+    else {
+      const index = arr.indexOf(val);
+      arr.splice(index, index + 1);
+      this.setState({spiergroepen: arr});
+    }
   }
 
   energy(event) {
@@ -63,8 +87,9 @@ class Index extends React.Component {
   
   render() {
     return (<div>
-      {this.state.introToEnergy ? null : <Intro toEnergy={this.toEnergy} />}
-      {this.state.introToEnergy ? <Energy home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
+      {this.state.introToEnergy || this.state.energyToSpiergroepen ? null : <Intro toEnergy={this.toEnergy} />}
+      {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
+      {this.state.energyToSpiergroepen ? <Spiergroepen spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
       </div>
     )
   }

@@ -23,7 +23,7 @@ class Intro extends React.Component {
       <section className="start">
         <div className="animation"></div>
       <p>
-        Opzoek naar oefeningen waarmee jij vandaag het beste uit jezelf haalt?
+        Opzoek naar nieuwe oefeningen waarmee jij vandaag het beste uit jezelf haalt?
       </p>
       <button onClick={this.props.toEnergy} className="introButtonEen">
         start
