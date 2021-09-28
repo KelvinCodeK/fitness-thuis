@@ -4,6 +4,7 @@ import './index.css';
 import Intro from './Intro';
 import Energy from './Energy';
 import Spiergroepen from './Spiergroepen';
+import Resultaat from './Resultaat';
 import veryTired from './images/veryTired.png';
 import tired from './images/tired.png';
 import neutral from './images/neutral.png';
@@ -16,6 +17,7 @@ class Index extends React.Component {
     this.state = {
      introToEnergy: false,
      energyToSpiergroepen: false,
+     spiergroepenToResultaat: false,
      energyLevel: neutral,
      energyPara: 'prima',
      spiergroepen: []
@@ -25,11 +27,11 @@ class Index extends React.Component {
     this.home = this.home.bind(this);
     this.toSpiergroepen = this.toSpiergroepen.bind(this);
     this.spiergroepenChecked = this.spiergroepenChecked.bind(this);
+    this.toResultaat = this.toResultaat.bind(this);
   }
 
   home() {
-    this.setState({introToEnergy: false, energyToSpiergroepen: false, spiergroepen: []});
-    
+    this.setState({introToEnergy: false, energyToSpiergroepen: false, energyLevel: neutral, energyPara: 'prima', spiergroepen: [], spiergroepenToResultaat: false});
   }
 
   toEnergy() {
@@ -38,6 +40,15 @@ class Index extends React.Component {
 
   toSpiergroepen() {
     this.setState({introToEnergy: false, energyToSpiergroepen: true});
+  }
+
+  toResultaat() {
+    if(!this.state.spiergroepen[0]) {
+      alert('Kies spiergroep(en) om te trainen en ga daarna verder.');
+    }
+    else {
+      this.setState({energyToSpiergroepen: false, spiergroepenToResultaat: true});
+    }
   }
 
   spiergroepenChecked(event) {
@@ -87,9 +98,10 @@ class Index extends React.Component {
   
   render() {
     return (<div>
-      {this.state.introToEnergy || this.state.energyToSpiergroepen ? null : <Intro toEnergy={this.toEnergy} />}
+      {this.state.introToEnergy || this.state.energyToSpiergroepen || this.state.spiergroepenToResultaat ? null : <Intro toEnergy={this.toEnergy} />}
       {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
-      {this.state.energyToSpiergroepen ? <Spiergroepen spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
+      {this.state.energyToSpiergroepen ? <Spiergroepen spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
+      {this.state.spiergroepenToResultaat ? <Resultaat currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}
       </div>
     )
   }

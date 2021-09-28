@@ -22,7 +22,7 @@ class Spiergroepen extends React.Component {
       </header>
       <section className="centeredSection">
         <p className="spiergroepenPara">
-          Welke <span>spiergroepen</span> wil jij trainen?
+          Welke <span>spiergroep(en)</span> wil je trainen?
         </p>
         <div className="checkboxContainer">
             <div className="checkboxDiv">
@@ -49,7 +49,7 @@ class Spiergroepen extends React.Component {
                 <input onChange={this.props.spiergroepenChecked} type="checkbox" id="benen" value="benen" />
                 <label htmlFor="benen">Benen</label></div>
         </div>
-        <button className="introButtonEen">finish</button>
+        <button onClick={this.props.spiergroepenToResultaat}className="introButtonEen">finish</button>
       </section>
     </div>
   );}
