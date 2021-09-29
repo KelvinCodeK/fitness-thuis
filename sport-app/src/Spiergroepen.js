@@ -20,7 +20,7 @@ class Spiergroepen extends React.Component {
       </p>
       </div>
       </header>
-      <section className="centeredSection">
+      <main className="centeredSection">
         <p className="spiergroepenPara">
           Welke <span>spiergroep(en)</span> wil je trainen?
         </p>
@@ -50,7 +50,7 @@ class Spiergroepen extends React.Component {
                 <label htmlFor="benen">Benen</label></div>
         </div>
         <button onClick={this.props.spiergroepenToResultaat}className="introButtonEen">finish</button>
-      </section>
+      </main>
     </div>
   );}
 }

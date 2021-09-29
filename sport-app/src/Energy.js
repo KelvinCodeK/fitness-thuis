@@ -20,7 +20,7 @@ class Energy extends React.Component {
       </p>
       </div>
       </header>
-      <section className="centeredSection">
+      <main className="centeredSection">
         <img className="energy" alt="Emoticon die weergeeft hoeveel energie jij vandaag hebt" src={this.props.energySmiley} />
         <p>
           Wat is jouw <span>energieniveau</span> vandaag?
@@ -30,7 +30,7 @@ class Energy extends React.Component {
         </div>
         <p className="niveau">Niveau: <span>{this.props.currentEnergy}</span></p>
         <button onClick={this.props.energyToSpiergroepen} className="introButtonEen">next</button>
-      </section>
+      </main>
     </div>
   );}
 }

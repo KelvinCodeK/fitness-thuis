@@ -70,13 +70,13 @@ p {
   margin-bottom: 2vmin;
   opacity: 0;
   animation-name: buttonsOpacity;
-  animation-duration: 2s;
+  animation-duration: 1.8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
 .introButtonTwee {
-  animation-delay: 1.8s;
+  animation-delay: 1.6s;
 }
 
 @keyframes buttonsOpacity {
@@ -90,7 +90,7 @@ p {
     opacity: 0;
   }
   75% {
-    opacity: 0.25;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -130,7 +130,7 @@ section {
   transform: translateY(100%);
   opacity: 0;
   animation-name: slideInPara;
-  animation-duration: 2s;
+  animation-duration: 1.8s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   margin-left: 2em;
@@ -138,7 +138,7 @@ section {
 }
 
 .saved > p {
-  animation-delay: 1.8s;
+  animation-delay: 1.6s;
 }
 
 @keyframes slideInPara {
@@ -171,15 +171,15 @@ section {
   position: absolute;
   left: 0px;
   animation-name: slideIn;
-  animation-duration: 1.4s;
-  animation-timing-function:ease-out;
+  animation-duration: 1.2s;
+  animation-timing-function:ease-in-out;
   animation-fill-mode: forwards;
   z-index: -1;
   border-radius: 8px;
 }
 
 .animationTwee {
-  animation-delay: 1.8s;
+  animation-delay: 1.6s;
 }
 
 @keyframes slideIn {

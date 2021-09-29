@@ -1,3 +1,29 @@
+.iframeWidth {
+    width: 80%;
+}
+
+.iframeContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0px
+}
+
+
+
+iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+div.ytp-title-text {
+    font-size: 10px !important;
+}
+
 .oefeningen {
     display: flex;
     flex-direction: column;
@@ -5,13 +31,21 @@
     align-items: center;
 }
 
-.oefeningen p {
+.oefeningUitleg, .oefeningenIntro {
     color: white;
     font-weight: initial;
 }
 
 .oefening {
     margin: 2em;
+    width: 100%;
+}
+
+.gezondheid {
+    width: 80%;
+    color: rgb(94 217 255);
+    font-size: calc(6px + 1vmin);
+    font-weight: initial;
 }
 
 .oefeningen > p {
@@ -25,23 +59,46 @@ ul {
     display: flex;
     flex-direction: row;
     margin: 0px;
-    padding: 0px;
-    border-bottom: 1px solid white;
+    padding: 1em;
+    border-bottom: calc(2px + 0.5vmin) solid white;
 }
 
 li {
-    text-decoration: underline;
-    margin: 1em;
+    text-decoration: overline;
     cursor: pointer;
     font-size: calc(7px + 1.3vmin);
 }
 
-h4 {
+.oefeningOL {
+    flex-direction: column;
+    border: none;
+    padding: 0px;
+}
+
+.orderedListItem {
+    text-decoration: inherit;
     color: white;
-    text-shadow: 1px 1px 1px black;
+}
+
+h2 {
+    color: white;
+    font-size: calc(12px + 2.5vmin);
+    font-weight: normal;
+    text-shadow: 0.5px 0.5px 0.5px #d8d5d5;
 }
 
 a {
     text-decoration: inherit;
     color: inherit;
+    margin: 1em;
+}
+
+.oefeningPara {
+    font-size: calc(6px + 1vmin);
+}
+
+@media only screen and (min-width: 800px) {
+    .iframeWidth {
+        width: 40%;
+    }
 }

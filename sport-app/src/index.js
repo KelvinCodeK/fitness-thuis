@@ -110,11 +110,6 @@ class Index extends React.Component {
 ReactDOM.render(
   <React.StrictMode>
     <Index />
-    {/* <footer>
-      <p>
-        De oefeningen zijn bedoeld voor mensen zonder lichamelijke klachten. Twijfel je of je een oefening aankan? Vraag advies aan je fysiotherapeut of arts.
-      </p>
-    </footer> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

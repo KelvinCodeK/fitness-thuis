@@ -4,7 +4,22 @@ import './Resultaat.css';
 
 class Resultaat extends React.Component {
 
-  // onmount inzetten om te bepalen welke vids etc je wil inladen. Opslaan in this om te koppelen aan component en dan in te laden op de pagina.
+  constructor(props) {
+    super(props);
+    this.test = this.test.bind(this);
+  }
+
+// Willmount, DidMount is te laat.
+  componentWillMount() {
+    this.obj = {
+      schouders: ['shouders tekst', 'schouders src'],
+      armen: ['armen tekst', 'armen src']
+    }
+  }
+
+  test(item) {
+    return this.obj[item][0];
+  }
 
   render() {
   return (
@@ -22,25 +37,39 @@ class Resultaat extends React.Component {
       </p>
       </div>
       </header>
-      <section className="oefeningen">
-          {this.props.currentEnergy === "knallen!" ? <p>Jij gaat vandaag <span>{this.props.currentEnergy}</span> De onderstaande oefeningen zijn aangepast aan jouw energieniveau.</p>: <p>Jij voelt je vandaag <span>{this.props.currentEnergy}</span>. De onderstaande oefeningen zijn aangepast aan jouw energieniveau.</p>}
-          
+      <main className="oefeningen">
+          {this.props.currentEnergy === "knallen!" 
+           ? <p className="oefeningenIntro">Jij gaat vandaag <span>{this.props.currentEnergy}</span> De onderstaande oefeningen zijn aangepast aan jouw energieniveau.</p>
+            : <p className="oefeningenIntro">Jij voelt je vandaag <span>{this.props.currentEnergy}</span>. De onderstaande oefeningen zijn aangepast aan jouw energieniveau.</p>}
             <section className="oefeningOverzicht">
           <ul>
-          {this.props.spiergroepen.map((x, key) => {
+          {this.props.spiergroepen.map((x) => {
               return <a href={'#' + x}><li key={`${x }`}>{x}</li></a>
           })}
         </ul>
-         </section>
-          {this.props.spiergroepen.map((x, key) => {
+           </section>
+          {this.props.spiergroepen.map((x) => {
               return (
               <section className="oefening">
-                <h4 id={x} key={`${x}`}>{x}</h4>
-                <div style={{'width': '200px', 'height': '200px', 'border': '1px solid white'}}></div>
+                <h2 id={x} key={`${x}`}>{x}</h2>
+                <p className="oefeningUitleg">Oefening naam</p>
+                <div className="iframeWidth">
+                <div className="iframeContainer">
+                <iframe src="https://www.youtube.com/embed/H0c-4nZjIWQ?modestbranding=1" title="YouTube fitnessoefening voor thuis" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
+                <ol className="oefeningOL">
+                <li className="orderedListItem">{this.test(x)}</li>
+                <li className="orderedListItem">{this.test(x)}</li>
+                <li className="orderedListItem">{this.test(x)}</li>
+                </ol>
               </section>
               )
           })}
-      </section>
+          <p className="gezondheid">
+        De oefeningen zijn bedoeld voor mensen zonder lichamelijke klachten. Twijfel je of je een oefening aankan? Vraag advies aan je fysiotherapeut of arts.
+      </p>
+      </main>
     </div>
   );}
 }

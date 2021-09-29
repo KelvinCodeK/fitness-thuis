@@ -19,7 +19,7 @@ class Intro extends React.Component {
         Ideale thuisoefeningen geselecteerd op inspanning en spiergroepen
       </p>
       </div>
-      </header> 
+      </header>
       <section className="start">
         <div className="animation"></div>
       <p>
@@ -32,7 +32,7 @@ class Intro extends React.Component {
       <section className="saved">
       <div className="animationTwee"></div>
       <p>
-        Eerder deze website bezocht? Bekijk jouw meest recente oefeningen!
+        Bekijk jouw meest recente oefeningen!
       </p>
       <button className="introButtonTwee">
         recent
