@@ -1,15 +1,24 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+.home {
+    position:fixed;
+    z-index: 1;
+    border: 2px solid white;
+}
+
 .iframeWidth {
     width: 80%;
+    border: calc(2px + 0.5vmin) solid white;
 }
 
 .iframeContainer {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-    height: 0px
+    height: 0px;
 }
-
-
 
 iframe {
     position: absolute;
@@ -38,7 +47,7 @@ div.ytp-title-text {
 
 .oefening {
     margin: 2em;
-    width: 100%;
+    width: 90%;
 }
 
 .gezondheid {
@@ -58,15 +67,17 @@ ul {
     color: rgb(94 217 255);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0px;
     padding: 1em;
-    border-bottom: calc(2px + 0.5vmin) solid white;
 }
 
 li {
     text-decoration: overline;
     cursor: pointer;
     font-size: calc(7px + 1.3vmin);
+    padding: 3px;
 }
 
 .oefeningOL {
@@ -78,6 +89,9 @@ li {
 .orderedListItem {
     text-decoration: inherit;
     color: white;
+    cursor:auto;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 h2 {
@@ -85,16 +99,39 @@ h2 {
     font-size: calc(12px + 2.5vmin);
     font-weight: normal;
     text-shadow: 0.5px 0.5px 0.5px #d8d5d5;
+    border-top: calc(2px + 0.2vmin) solid white;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: calc(8px + 2vmin);
 }
 
 a {
     text-decoration: inherit;
     color: inherit;
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .oefeningPara {
     font-size: calc(6px + 1vmin);
+}
+
+.herhalingen {
+    border: calc(2px + 0.3vmin) solid rgb(94 217 255);;
+    width: calc(50px + 30vmin);
+    height:calc(35px + 5vmin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.herhalingen > p {
+    color: white;
+    font-weight: normal;
+    margin: 0px;
 }
 
 @media only screen and (min-width: 800px) {

@@ -4,27 +4,117 @@ import './Resultaat.css';
 
 class Resultaat extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.test = this.test.bind(this);
-  }
-
 // Willmount, DidMount is te laat.
   componentWillMount() {
     this.obj = {
-      schouders: ['shouders tekst', 'schouders src'],
-      armen: ['armen tekst', 'armen src']
+      schouders: [
+        'De crunch', 
+        <ol className="oefeningOL">
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+        </ol>, 
+        'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=MKmrqcoCZ-M',
+        3, 
+        10],
+      borst: [
+        'De crunch', 
+        <ol className="oefeningOL">
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+        </ol>, 
+        'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&amp;modestbranding=1',
+        3, 
+        10],
+      rug: [
+        'De crunch', 
+        <ol className="oefeningOL">
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+        </ol>, 
+        'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&amp;modestbranding=1',
+        3, 
+        10],
+      armen: [
+        'De crunch', 
+        <ol className="oefeningOL">
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+        </ol>, 
+        'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&amp;modestbranding=1',
+        3, 
+        10],
+      buikspieren: [
+        'De crunch', 
+        <ol className="oefeningOL">
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+        </ol>, 
+        'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&amp;modestbranding=1',
+        3, 
+        10],
+      benen: [
+        'De crunch', 
+        <ol className="oefeningOL">
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
+          <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+        </ol>, 
+        'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&amp;modestbranding=1',
+        3, 
+        10]
     }
   }
 
-  test(item) {
+  oefeningNaam(item) {
     return this.obj[item][0];
+  }
+
+  ol(item) {
+    return this.obj[item][1];
+  }
+
+  src(item){
+    return this.obj[item][2];
+  }
+
+  herhaling(item) {
+    let sets = this.obj[item][3];
+    let reps = this.obj[item][4];
+    switch(this.props.currentEnergy) {
+      case 'uitgeput':
+        sets -= 1;
+        reps -= 5;
+        break;
+      case 'zwakjes':
+        sets -= 1;
+        reps -= 2;
+        break;
+      case 'prima':
+        break;
+      case 'fit':
+        sets += 1;
+        reps += 2;
+        break;
+      case 'knallen!':
+        sets += 1;
+        reps += 5;
+        break;
+      default:
+        break;
+    }
+    const herhalingArr = [sets, reps];
+    return herhalingArr;
   }
 
   render() {
   return (
     <div className="result">
-      <header>
+      <header className="sticky">
       <button onClick={this.props.home} className="home">
       home
       </button>
@@ -41,28 +131,28 @@ class Resultaat extends React.Component {
           {this.props.currentEnergy === "knallen!" 
            ? <p className="oefeningenIntro">Jij gaat vandaag <span>{this.props.currentEnergy}</span> De onderstaande oefeningen zijn aangepast aan jouw energieniveau.</p>
             : <p className="oefeningenIntro">Jij voelt je vandaag <span>{this.props.currentEnergy}</span>. De onderstaande oefeningen zijn aangepast aan jouw energieniveau.</p>}
-            <section className="oefeningOverzicht">
           <ul>
           {this.props.spiergroepen.map((x) => {
               return <a href={'#' + x}><li key={`${x }`}>{x}</li></a>
           })}
         </ul>
-           </section>
           {this.props.spiergroepen.map((x) => {
               return (
-              <section className="oefening">
-                <h2 id={x} key={`${x}`}>{x}</h2>
-                <p className="oefeningUitleg">Oefening naam</p>
+              <section id={x} className="oefening">
+                <h2 key={`${x}`}>{x}</h2>
+                <h3 className="oefeningUitleg"><span>{this.oefeningNaam(x)}</span></h3>
                 <div className="iframeWidth">
                 <div className="iframeContainer">
-                <iframe src="https://www.youtube.com/embed/H0c-4nZjIWQ?modestbranding=1" title="YouTube fitnessoefening voor thuis" frameborder="0" allowfullscreen></iframe>
+                <iframe src={this.src(x)} title="YouTube fitnessoefening voor thuis" frameborder="0" allowfullscreen></iframe>
                 </div>
                 </div>
-                <ol className="oefeningOL">
-                <li className="orderedListItem">{this.test(x)}</li>
-                <li className="orderedListItem">{this.test(x)}</li>
-                <li className="orderedListItem">{this.test(x)}</li>
-                </ol>
+                {this.ol(x)}
+                {
+                <div className="herhalingen">
+                  <p>Sets: <span>{this.herhaling(x)[0]}</span></p>
+                  <p>Reps per set: <span>{this.herhaling(x)[1]}</span></p>
+                </div>
+                }
               </section>
               )
           })}

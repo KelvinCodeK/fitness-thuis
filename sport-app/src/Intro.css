@@ -12,7 +12,7 @@ header {
   border-bottom: calc(2px + 1vmin) solid #d8d5d5;
 }
 
-.home {
+.home, .homeIntro {
   font-size: calc(5px + 1.5vmin);
   background-color: black;
   color: white;
@@ -23,9 +23,10 @@ header {
   font-weight: bold;
 }
 
-.home:hover {
+.home:hover, .homeIntro:hover {
   background-color: white;
   color: black;
+  border-color: black
 }
 
 h1 {

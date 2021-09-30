@@ -8,7 +8,7 @@ class Intro extends React.Component {
   return (
     <div className="fullPage">
       <header>
-      <button className="home">
+      <button className="homeIntro">
       home
       </button>
       <div className="headerText">
