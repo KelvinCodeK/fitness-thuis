@@ -12,12 +12,3 @@ body {
 .introButtonEen:hover, .introButtonTwee:hover {
   border: 3px solid #d8d5d5;
 }
-
-/* footer {
-  border-top: calc(2px + 0.8vmin) dashed white;
-  position: absolute;
-  width: 100vw;
-  bottom: 0px;
-  opacity: 0.7;
-  font-style: italic;
-} */

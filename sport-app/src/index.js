@@ -28,6 +28,7 @@ class Index extends React.Component {
     this.toSpiergroepen = this.toSpiergroepen.bind(this);
     this.spiergroepenChecked = this.spiergroepenChecked.bind(this);
     this.toResultaat = this.toResultaat.bind(this);
+    this.next = this.next.bind(this);
   }
 
   home() {
@@ -93,7 +94,32 @@ class Index extends React.Component {
       this.setState({energyLevel: neutral});
       this.setState({energyPara: 'prima'});
   }
+  }
 
+  next(event) {
+    const val = event.target.value;
+    const arr = this.state.spiergroepen;
+    if(val.includes('_1')) {
+      const index = arr.indexOf(val);
+      arr.splice(index, index + 1);
+      const newVal = val.replace('_1', '_2');
+      arr.splice(index, 0, newVal);
+      this.setState({spiergroepen: arr});
+    }
+    else if(val.includes('_2')) {
+      const index = arr.indexOf(val);
+      arr.splice(index, index + 1);
+      const newVal = val.replace('_2', '');
+      arr.splice(index, 0, newVal);
+      this.setState({spiergroepen: arr});
+    }
+    else {
+      const index = arr.indexOf(val);
+      arr.splice(index, index + 1);
+      const newVal = val + '_1';
+      arr.splice(index, 0, newVal);
+      this.setState({spiergroepen: arr});
+    }
   }
   
   render() {
@@ -101,7 +127,7 @@ class Index extends React.Component {
       {this.state.introToEnergy || this.state.energyToSpiergroepen || this.state.spiergroepenToResultaat ? null : <Intro toEnergy={this.toEnergy} />}
       {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
       {this.state.energyToSpiergroepen ? <Spiergroepen spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
-      {this.state.spiergroepenToResultaat ? <Resultaat currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}
+      {this.state.spiergroepenToResultaat ? <Resultaat nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}
       </div>
     )
   }
