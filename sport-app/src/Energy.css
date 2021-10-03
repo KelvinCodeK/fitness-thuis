@@ -16,8 +16,7 @@ span {
   color: rgb(94 217 255);
 }
 
-.niveau, .spiergroepenPara {
-  transform: translateY(100%);
+.niveau, .spiergroepenPara, .dumbellPara {
   animation-name: slideInExtra;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -32,6 +31,8 @@ span {
   to {
     opacity: 1;
     transform: translateY(0%);
+    /* firefox hack voor smooth animation */
+    -moz-transform: rotate(0.03deg);
   }
 }
 

@@ -16,10 +16,10 @@ html {
     color: white;
 }
 
-.iframeWidth > span {
+.loadingInitial {
     position: absolute;
     z-index: -1;
-    opacity: 0.5;
+    font-size: calc(7px + 1.3vmin);
 }
 
 .iframeContainer {
@@ -47,6 +47,20 @@ div.ytp-title-text {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.oefening > .introButtonEen {
+    opacity: 1;
+    animation: none;
+    margin: 0px;
+}
+
+.andereOefening {
+    color: white;
+    font-weight: normal;
+
+    border-top: 1px solid white;
+    padding: 3px;
 }
 
 .oefeningUitleg, .oefeningenIntro {

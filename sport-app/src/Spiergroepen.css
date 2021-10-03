@@ -1,7 +1,11 @@
-.spiergroepenPara {
+.dumbellPara, .spiergroepenPara {
     border-left: 1px solid white;
     padding: 3px;
     border-bottom: 1px solid white;
+}
+
+.spiergroepenPara {
+    animation-delay: 0.7s;
 }
 
 label {
@@ -25,6 +29,25 @@ input[type="checkbox"  i] {
     margin: 0px;
     margin-right: calc(2px + 1vmin);
     cursor: pointer;
+}
+
+input[type="radio" i] {
+    height: calc(7px + 1vmin);
+    width: calc(7px + 1vmin);
+}
+
+.dumbell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(60px + 7vmin);
+}
+
+.dumbellDiv {
+
+    display: flex;
+
+    align-items: center;
 }
 
 .checkboxDiv {

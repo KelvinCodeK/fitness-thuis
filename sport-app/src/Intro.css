@@ -128,7 +128,6 @@ section {
 }
 
 .start > p, .saved > p {
-  transform: translateY(100%);
   opacity: 0;
   animation-name: slideInPara;
   animation-duration: 1.8s;
@@ -159,6 +158,8 @@ section {
   100% {
     transform: translateY(0%);
     opacity: 1;
+    /* firefox hack voor smooth animation */
+    -moz-transform: rotate(0.03deg);
   }
 }
 

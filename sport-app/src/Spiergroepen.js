@@ -1,7 +1,8 @@
 import React from 'react';
 import './Spiergroepen.css';
 
-
+// Met of zonder dumbbell gewichten optie toevoegen? > zo ja, dan twee objecten / binnen het object 2 properties aanmaken. en obv de state ternary operator bepalen uit welk object je het ophaalt.
+// je kan er ook een .com domein van maken naast het .nl domein. Waarin je de teksten vertaald.
 class Spiergroepen extends React.Component {
 
   render() {
@@ -21,6 +22,22 @@ class Spiergroepen extends React.Component {
       </div>
       </header>
       <main className="centeredSection">
+      <p className="dumbellPara">
+          Beschik jij over dumbells of soortgelijke gewichten?
+        </p>
+        <section className="dumbell">
+        <div className="dumbellDiv">
+
+  <input onChange={this.props.dumbells} type="radio" id="ja" name="radioButton" value="ja" />
+  <label htmlFor="ja">ja</label>
+
+</div>
+<div className="dumbellDiv">
+  <input onChange={this.props.dumbells} type="radio" id="nee" name="radioButton" value="nee" />
+  <label htmlFor="nee">nee</label>
+            </div> 
+            </section>
+            
         <p className="spiergroepenPara">
           Welke <span>spiergroep(en)</span> wil je trainen?
         </p>
