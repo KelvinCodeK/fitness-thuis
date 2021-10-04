@@ -42,7 +42,21 @@ class Index extends React.Component {
   }
 
   home() {
-    this.setState({introToEnergy: false, energyToSpiergroepen: false, energyLevel: neutral, energyPara: 'prima', spiergroepen: [], spiergroepenToResultaat: false, dumbells: null});
+    this.setState({
+      introToEnergy: false,
+      energyToSpiergroepen: false,
+      spiergroepenToResultaat: false,
+      energyLevel: neutral,
+      energyPara: 'prima',
+      spiergroepen: [],
+      dumbells: null,
+      schouders: 0,
+      borst: 0,
+      rug: 0,
+      armen: 0,
+      buikspieren: 0,
+      benen: 0,
+      loadStart: 0});
   }
 
   toEnergy() {
@@ -68,15 +82,18 @@ class Index extends React.Component {
   }
 
   spiergroepenChecked(event) {
+    const isChecked = event.target.checked;
     const val = event.target.value;
     const arr = this.state.spiergroepen;
-    if(!arr.includes(val)) {
-      arr.push(val);
-      this.setState({spiergroepen: arr})
+    if(isChecked) {
+      if(!arr.includes(val)) {
+        arr.push(val);
+        this.setState({spiergroepen: arr})
+      }
     }
     else {
       const index = arr.indexOf(val);
-      arr.splice(index, index + 1);
+      arr.splice(index, 1);
       this.setState({spiergroepen: arr});
     }
   }

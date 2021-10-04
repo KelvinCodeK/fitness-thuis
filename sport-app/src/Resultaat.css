@@ -102,12 +102,22 @@ ul {
     padding: 1em;
 }
 
-li {
+.ulListItem {
     text-decoration: overline;
     cursor: pointer;
+    transition: color 0.1s ease;
+}
+
+.ulListItem:hover {
+    color: white;
+}
+
+li {
     font-size: calc(7px + 1.3vmin);
     padding: 3px;
 }
+
+
 
 .oefeningOL {
     flex-direction: column;
@@ -116,9 +126,8 @@ li {
 }
 
 .orderedListItem {
-    text-decoration: inherit;
+
     color: white;
-    cursor:auto;
     margin-left: 5em;
     margin-right: 5em;
 }
