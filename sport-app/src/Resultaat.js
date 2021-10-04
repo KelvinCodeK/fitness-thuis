@@ -52,12 +52,10 @@ class Resultaat extends React.Component {
       case 'prima':
         break;
       case 'fit':
-        sets += 1;
         reps += 2;
         break;
       case 'knallen!':
         sets += 1;
-        reps += 5;
         break;
       default:
         break;
@@ -77,31 +75,31 @@ class Resultaat extends React.Component {
           [
             'De shoulder press', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+              <li className="orderedListItem">Neem plaats op een stoel en hef de gewichten boven jouw schouders</li>
+              <li className="orderedListItem">Til de gewichten gecontroleerd omhoog totdat jouw armen gestrekt zijn</li>
+              <li className="orderedListItem">Laat jouw armen gecontroleerd terugzakken naar de startpositie van 90 graden</li>  
             </ol>, 
-            'https://www.youtube.com/embed/Z5g48LuHB9s?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=Z5g48LuHB9s',
+            'https://www.youtube.com/embed/Z5g48LuHB9s?rel=0&start=19&modestbranding=1&loop=1&iv_load_policy=3&playlist=Z5g48LuHB9s',
             3, 
             10],
             [
               'De pike pushup', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en til jouw lichaam omhoog in de vorm van een driehoek</li>
+                <li className="orderedListItem">Til de hiel van jouw voeten en spreid je vingers om gecontroleerd jouw armen te buigen en weer te strekken</li>
+                <p>Als de vorm van een driehoek te intesief is plaats je jouw voeten verder naar achter</p>  
               </ol>, 
-              'https://www.youtube.com/embed/x7_I5SUAd00?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=x7_I5SUAd00',
+              'https://www.youtube.com/embed/x7_I5SUAd00?rel=0&start=4&modestbranding=1&loop=1&iv_load_policy=3&playlist=x7_I5SUAd00',
               3, 
               10],
               [
                 'De lateral raise', 
                 <ol className="oefeningOL">
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                  <li className="orderedListItem">Ga staan en houdt de gewichten naast jouw lichaam met licht gebogen elleboog en voeten op schouderbreedte</li>
+                  <li className="orderedListItem">Til de gewichten tot nek hoogte horizontaal naast jouw lichaam</li>
+                  <li className="orderedListItem">Laat de gewichten gecontroleerd zakken tot de start positie</li>  
                 </ol>, 
-                'https://www.youtube.com/embed/geenhiHju-o?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=geenhiHju-o',
+                'https://www.youtube.com/embed/geenhiHju-o?rel=0&start=20&modestbranding=1&loop=1&iv_load_policy=3&playlist=geenhiHju-o',
                 3, 
                 10]
         ],
@@ -109,31 +107,34 @@ class Resultaat extends React.Component {
           [
             'De push-up', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+              <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en hef jouw lichaam recht als een plank</li>
+              <li className="orderedListItem">Buig gecontroleerd door jouw armen heen en zak tot iets boven het oppervlak terwijl je het lichaam recht houdt</li>
+              <li className="orderedListItem">Zet je gecontroleerd af van het oppervlak naar de startpositie</li>
+              <p>Als dit te uitdagen is kan je de oefening ook uitvoeren met knie&euml;n op de vloer in plaats van voeten</p>    
             </ol>, 
-            'https://www.youtube.com/embed/JyCG_5l3XLk?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=JyCG_5l3XLk',
+            'https://www.youtube.com/embed/JyCG_5l3XLk?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=JyCG_5l3XLk',
             3, 
             10],
            [
               'De wide grip push-up', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en hef jouw lichaam recht als een plank</li>
+                <li className="orderedListItem">Plaats jouw handen binnen schouderbreedte en zak tot iets boven het oppervlak terwijl je het lichaam recht houdt</li>
+                <li className="orderedListItem">Zet je gecontroleerd af van het oppervlak naar de startpositie</li>  
+                <p>Als dit te uitdagen is kan je de oefening ook uitvoeren met knie&euml;n op de vloer in plaats van voeten</p>  
               </ol>, 
-              'https://www.youtube.com/embed/rr6eFNNDQdU?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=rr6eFNNDQdU',
+              'https://www.youtube.com/embed/rr6eFNNDQdU?rel=0&start=35&modestbranding=1&loop=1&iv_load_policy=3&playlist=rr6eFNNDQdU',
               3, 
               10],
               [
                 'De narrow grip push-up', 
                 <ol className="oefeningOL">
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en hef jouw lichaam recht als een plank</li>
+                <li className="orderedListItem">Plaats jouw handen buiten schouderbreedte en zak tot iets boven het oppervlak terwijl je het lichaam recht houdt</li>
+                <li className="orderedListItem">Zet je gecontroleerd af van het oppervlak naar de startpositie</li>  
+                <p>Als dit te uitdagen is kan je de oefening ook uitvoeren met knie&euml;n op de vloer in plaats van voeten</p>  
                 </ol>, 
-                'https://www.youtube.com/embed/IcWPQo1i0k4?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=IcWPQo1i0k4',
+                'https://www.youtube.com/embed/IcWPQo1i0k4?rel=0&start=40&modestbranding=1&loop=1&iv_load_policy=3&playlist=IcWPQo1i0k4',
                 3, 
                 10]
         ],
@@ -141,31 +142,32 @@ class Resultaat extends React.Component {
           [
             'Lower back extensions', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+              <li className="orderedListItem">Ga op je buik liggen op een comfortabel oppervlak</li>
+              <li className="orderedListItem">Zet jouw tenen op de grond en plaats je handen op je achterhoofd</li>
+              <li className="orderedListItem">Til gecontroleerd jouw bovenlichaam van de grond en weer terug naar de startpositie</li>  
+              <p>In plaats van handen op het achterhoofd kan je ook je armen voor je uit strekken</p>  
             </ol>, 
-            'https://www.youtube.com/embed/Ikq3OCFoP7c?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=Ikq3OCFoP7c',
+            'https://www.youtube.com/embed/Ikq3OCFoP7c?rel=0&start=78&modestbranding=1&loop=1&iv_load_policy=3&playlist=Ikq3OCFoP7c',
             3, 
             10],
             [
               'De cobra stretch', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak met je buik op de vloer</li>
+                <li className="orderedListItem">Til gecontroleerd jouw bovenlichaam van de grond totdat jouw armen gestrekt zijn</li>
+                <li className="orderedListItem">Laat gecontroleerd jouw lichaam zakken naar de startpositie</li>  
               </ol>, 
-              'https://www.youtube.com/embed/Aa6zdmje-c4?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=Aa6zdmje-c4',
+              'https://www.youtube.com/embed/Aa6zdmje-c4?rel=0&start=24&modestbranding=1&loop=1&iv_load_policy=3&playlist=Aa6zdmje-c4',
               3, 
               10],
               [
                 'De dumbell row', 
                 <ol className="oefeningOL">
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                  <li className="orderedListItem">Plaats jouw knie hand op een verhoogd oppervlak zoals je bed</li>
+                  <li className="orderedListItem">Pak het gewicht met een arm op en hef jouw elleboog boven je rug</li>
+                  <li className="orderedListItem">Laat het gewicht gecontroleerd zakken naar de startpositie</li>  
                 </ol>, 
-                'https://www.youtube.com/embed/-koP10y1qZI?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=-koP10y1qZI',
+                'https://www.youtube.com/embed/-koP10y1qZI?rel=0&start=38&modestbranding=1&loop=1&iv_load_policy=3&playlist=-koP10y1qZI',
                 3, 
                 10]
 
@@ -175,29 +177,29 @@ class Resultaat extends React.Component {
                 [
                   'De tricep dip', 
                   <ol className="oefeningOL">
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+                    <li className="orderedListItem">Plaats jouw handen op schouderbreedte op een stevige stoel en zet een stap naar voeren met beide voeten</li>
+                    <li className="orderedListItem">Laat jouw lichaam gecontroleerd zakken totdat de ellebogen 90 graden zijn gebogen</li>
+                    <li className="orderedListItem">Hef je lichaam gecontroleerd naar de startpositie</li>  
                   </ol>, 
-                  'https://www.youtube.com/embed/6kALZikXxLc?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=6kALZikXxLc',
+                  'https://www.youtube.com/embed/6kALZikXxLc?rel=0&start=26&modestbranding=1&loop=1&iv_load_policy=3&playlist=6kALZikXxLc',
                   3, 
                   10],
                   [
                     'De bicep curl', 
                     <ol className="oefeningOL">
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                      <li className="orderedListItem">Ga rechtop staan en houdt de gewichten naast jouw lichaam</li>
+                      <li className="orderedListItem">Til de gewichten op terwijl je ze naar buiten roteerd totdat het gewicht net boven de elleboog komt</li>
+                      <li className="orderedListItem">Laat het gewicht gecontroleerd zakken tot de startpositie en roteer het gewicht terug</li>  
                     </ol>, 
-                    'https://www.youtube.com/embed/rXfGNkxUZks?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=rXfGNkxUZks',
+                    'https://www.youtube.com/embed/ykJmrZ5v0Oo?rel=0&start=21&modestbranding=1&loop=1&iv_load_policy=3&playlist=ykJmrZ5v0Oo',
                     3, 
                     10],
                     [
                       'De hammer curl', 
                       <ol className="oefeningOL">
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                        <li className="orderedListItem">Ga rechtop staan en houdt de gewichten naast jouw lichaam</li>
+                        <li className="orderedListItem">Houdt je ellebogen dichtbij je torso en til het gewicht op tot net boven de elleboog</li>
+                        <li className="orderedListItem">Laat het gewicht gecontroleerd zakken tot de startpositie</li>  
                       </ol>, 
                       'https://www.youtube.com/embed/P5sXHLmXmBM?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=P5sXHLmXmBM',
                       3, 
@@ -208,31 +210,32 @@ class Resultaat extends React.Component {
                 [
                   'De leg raise', 
                   <ol className="oefeningOL">
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+                    <li className="orderedListItem">Ga op je rug liggen en plaats jouw handen onder je onderrug</li>
+                    <li className="orderedListItem">Til je benen van de grond en houw je knie&euml;n iets gebogen</li>
+                    <li className="orderedListItem">Til je benen totdat ze zijn gestrekt boven je heupen en laat ze gecontroleerd zakken naar de startpositie</li>  
                   </ol>, 
-                  'https://www.youtube.com/embed/l4kQd9eWclE?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=l4kQd9eWclE',
+                  'https://www.youtube.com/embed/l4kQd9eWclE?rel=0&start=7&modestbranding=1&loop=1&iv_load_policy=3&playlist=l4kQd9eWclE',
                   3, 
                   10],
                   [
                     'De jackknife', 
                     <ol className="oefeningOL">
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                      <li className="orderedListItem">Ga op je rug liggen op een comfortabel oppervlak</li>
+                      <li className="orderedListItem">Hef je benen met gebogen knie&euml;n van de grond en strek je armen uit naar achteren</li>
+                      <li className="orderedListItem">Strek je benen en breng daarna je knie&euml;n en armen naar elkaar toe</li>  
+                      <li className="orderedListItem">Beweeg gecontroleerd terug naar de startpositie</li>  
                     </ol>, 
-                    'https://www.youtube.com/embed/CWOZyf8kaH0?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=CWOZyf8kaH0',
+                    'https://www.youtube.com/embed/CWOZyf8kaH0?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=CWOZyf8kaH0',
                     3, 
                     10],
                     [
                       'De crunch', 
                       <ol className="oefeningOL">
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                        <li className="orderedListItem">Ga op je rug liggen en plaats je voeten voor je op de grond met gebogen knie&euml;n</li>
+                        <li className="orderedListItem">Plaats je handen op je achterhoofd en hef je bovenlichaam zonder dat je onderrug van de vloer komt</li>
+                        <li className="orderedListItem">Laat je lichaam gecontroleerd zakken naar de startpositie</li>  
                       </ol>, 
-                      'https://www.youtube.com/embed/geenhiHju-o?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=geenhiHju-o',
+                      'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&start=20&modestbranding=1&loop=1&iv_load_policy=3&playlist=MKmrqcoCZ-M',
                       3, 
                       10]
               ],
@@ -242,31 +245,31 @@ class Resultaat extends React.Component {
                 [
                   'De squat', 
                   <ol className="oefeningOL">
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-                    <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+                    <li className="orderedListItem">Ga rechtop staan met je voeten op schouderbreedte</li>
+                    <li className="orderedListItem">Zak gecontroleerd naar beneden alsof je in een stoel plaats neemt</li>
+                    <li className="orderedListItem">Houdt je lichaam recht en strek je benen om terug te komen in de startpositie</li>  
                   </ol>, 
-                  'https://www.youtube.com/embed/UXJrBgI2RxA?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=UXJrBgI2RxA',
+                  'https://www.youtube.com/embed/UXJrBgI2RxA?rel=0&start=37&modestbranding=1&loop=1&iv_load_policy=3&playlist=UXJrBgI2RxA',
                   3, 
                   10],
                   [
                     'De lunge', 
                     <ol className="oefeningOL">
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                      <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                      <li className="orderedListItem">Ga rechtop staan met je voeten op schouderbreedte</li>
+                      <li className="orderedListItem">Neem een grote stap naar voren en laat je lichaam zakken totdat je knie op de hoogte van je tenen is</li>
+                      <li className="orderedListItem">Stap weer naar achter om in de startpositie te eindigen</li>  
                     </ol>, 
-                    'https://www.youtube.com/embed/COKYKgQ8KR0?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=COKYKgQ8KR0',
+                    'https://www.youtube.com/embed/COKYKgQ8KR0?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=COKYKgQ8KR0',
                     3, 
                     10],
                     [
-                      'De wall sit', 
+                      'De calf raise', 
                       <ol className="oefeningOL">
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                        <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                        <li className="orderedListItem">Ga rechtop staan en houdt de gewichten naast jouw lichaam</li>
+                        <li className="orderedListItem">Zet je voeten af van de grond totdat je op je voorvoet staat</li>
+                        <li className="orderedListItem">Laat je voeten terugzakken naar de startpositie</li>  
                       </ol>, 
-                      'https://www.youtube.com/embed/vDf2Bfb6SOg?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=vDf2Bfb6SOg',
+                      'https://www.youtube.com/embed/_iYwv4QVFjM?rel=0&start=5&modestbranding=1&loop=1&iv_load_policy=3&playlist=_iYwv4QVFjM',
                       3, 
                       10]
               ]
@@ -275,58 +278,61 @@ class Resultaat extends React.Component {
       noDumbells: {
         schouders: [
 
-         [
-            'De lateral raise', 
-                <ol className="oefeningOL">
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
-                </ol>, 
-                'https://www.youtube.com/embed/geenhiHju-o?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=geenhiHju-o',
-                3, 
-                10],
-           [
-              'De pike pushup', 
+          [
+            'De pike pushup', 
+            <ol className="oefeningOL">
+              <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en til jouw lichaam omhoog in de vorm van een driehoek</li>
+              <li className="orderedListItem">Til de hiel van jouw voeten en spreid je vingers om gecontroleerd jouw armen te buigen en weer te strekken</li>
+              <p>Als de vorm van een driehoek te intesief is plaats je jouw voeten verder naar achter</p>  
+            </ol>, 
+            'https://www.youtube.com/embed/x7_I5SUAd00?rel=0&start=4&modestbranding=1&loop=1&iv_load_policy=3&playlist=x7_I5SUAd00',
+            3, 
+            10],
+            [
+              'De lateral raise', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                <li className="orderedListItem">Ga staan en houdt de gewichten naast jouw lichaam met licht gebogen elleboog en voeten op schouderbreedte</li>
+                <li className="orderedListItem">Til de gewichten tot nek hoogte horizontaal naast jouw lichaam</li>
+                <li className="orderedListItem">Laat de gewichten gecontroleerd zakken tot de start positie</li>  
               </ol>, 
-              'https://www.youtube.com/embed/x7_I5SUAd00?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=x7_I5SUAd00',
+              'https://www.youtube.com/embed/geenhiHju-o?rel=0&start=20&modestbranding=1&loop=1&iv_load_policy=3&playlist=geenhiHju-o',
               3, 
               10]
         ]
         ,
 
         borst: [
-         [
+          [
             'De push-up', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+              <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en hef jouw lichaam recht als een plank</li>
+              <li className="orderedListItem">Buig gecontroleerd door jouw armen heen en zak tot iets boven het oppervlak terwijl je het lichaam recht houdt</li>
+              <li className="orderedListItem">Zet je gecontroleerd af van het oppervlak naar de startpositie</li>
+              <p>Als dit te uitdagen is kan je de oefening ook uitvoeren met knie&euml;n op de vloer in plaats van voeten</p>    
             </ol>, 
-            'https://www.youtube.com/embed/JyCG_5l3XLk?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=JyCG_5l3XLk',
+            'https://www.youtube.com/embed/JyCG_5l3XLk?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=JyCG_5l3XLk',
             3, 
             10],
-            [
+           [
               'De wide grip push-up', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en hef jouw lichaam recht als een plank</li>
+                <li className="orderedListItem">Plaats jouw handen binnen schouderbreedte en zak tot iets boven het oppervlak terwijl je het lichaam recht houdt</li>
+                <li className="orderedListItem">Zet je gecontroleerd af van het oppervlak naar de startpositie</li>  
+                <p>Als dit te uitdagen is kan je de oefening ook uitvoeren met knie&euml;n op de vloer in plaats van voeten</p>  
               </ol>, 
-              'https://www.youtube.com/embed/rr6eFNNDQdU?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=rr6eFNNDQdU',
+              'https://www.youtube.com/embed/rr6eFNNDQdU?rel=0&start=35&modestbranding=1&loop=1&iv_load_policy=3&playlist=rr6eFNNDQdU',
               3, 
               10],
-            [
+              [
                 'De narrow grip push-up', 
                 <ol className="oefeningOL">
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                  <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak en hef jouw lichaam recht als een plank</li>
+                <li className="orderedListItem">Plaats jouw handen buiten schouderbreedte en zak tot iets boven het oppervlak terwijl je het lichaam recht houdt</li>
+                <li className="orderedListItem">Zet je gecontroleerd af van het oppervlak naar de startpositie</li>  
+                <p>Als dit te uitdagen is kan je de oefening ook uitvoeren met knie&euml;n op de vloer in plaats van voeten</p>  
                 </ol>, 
-                'https://www.youtube.com/embed/IcWPQo1i0k4?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=IcWPQo1i0k4',
+                'https://www.youtube.com/embed/IcWPQo1i0k4?rel=0&start=40&modestbranding=1&loop=1&iv_load_policy=3&playlist=IcWPQo1i0k4',
                 3, 
                 10]
 
@@ -337,21 +343,22 @@ class Resultaat extends React.Component {
           [
             'Lower back extensions', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+              <li className="orderedListItem">Ga op je buik liggen op een comfortabel oppervlak</li>
+              <li className="orderedListItem">Zet jouw tenen op de grond en plaats je handen op je achterhoofd</li>
+              <li className="orderedListItem">Til gecontroleerd jouw bovenlichaam van de grond en weer terug naar de startpositie</li>  
+              <p>In plaats van handen op het achterhoofd kan je ook je armen voor je uit strekken</p>  
             </ol>, 
-            'https://www.youtube.com/embed/Ikq3OCFoP7c?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=Ikq3OCFoP7c',
+            'https://www.youtube.com/embed/Ikq3OCFoP7c?rel=0&start=78&modestbranding=1&loop=1&iv_load_policy=3&playlist=Ikq3OCFoP7c',
             3, 
             10],
             [
               'De cobra stretch', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+                <li className="orderedListItem">Plaats jouw voeten en handen op een onafgebroken oppervlak met je buik op de vloer</li>
+                <li className="orderedListItem">Til gecontroleerd jouw bovenlichaam van de grond totdat jouw armen gestrekt zijn</li>
+                <li className="orderedListItem">Laat gecontroleerd jouw lichaam zakken naar de startpositie</li>  
               </ol>, 
-              'https://www.youtube.com/embed/Aa6zdmje-c4?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=Aa6zdmje-c4',
+              'https://www.youtube.com/embed/Aa6zdmje-c4?rel=0&start=24&modestbranding=1&loop=1&iv_load_policy=3&playlist=Aa6zdmje-c4',
               3, 
               10]
 
@@ -362,19 +369,20 @@ class Resultaat extends React.Component {
         [
           'De tricep dip', 
           <ol className="oefeningOL">
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+            <li className="orderedListItem">Plaats jouw handen op schouderbreedte op een stevige stoel en zet een stap naar voeren met beide voeten</li>
+            <li className="orderedListItem">Laat jouw lichaam gecontroleerd zakken totdat de ellebogen 90 graden zijn gebogen</li>
+            <li className="orderedListItem">Hef je lichaam gecontroleerd naar de startpositie</li>  
           </ol>, 
-          'https://www.youtube.com/embed/6kALZikXxLc?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=6kALZikXxLc',
+          'https://www.youtube.com/embed/6kALZikXxLc?rel=0&start=26&modestbranding=1&loop=1&iv_load_policy=3&playlist=6kALZikXxLc',
           3, 
           10],
         [
             'De towel curl', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+              <li className="orderedListItem">Ga rechtop staan en zak iets door je knie&euml;n</li>
+              <li className="orderedListItem">Plaats een handoek achter je knie holte en houdt de handoek met twee handen boven je been vast</li>
+              <li className="orderedListItem">Til de handdoek omhoog totdat de handdoek boven je elleboog uitkomt en laat hem gecontroleerd zakken</li>  
+              <p>Voor evenwicht kan je tegen een muur aan staan en duw met je been de handdoek omlaag om de oefening uitdagender te maken</p>
             </ol>, 
             'https://www.youtube.com/embed/kx_CogPXDJ0?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=kx_CogPXDJ0',
             3, 
@@ -383,34 +391,35 @@ class Resultaat extends React.Component {
        ,
 
        buikspieren: [
-       [
+        [
           'De leg raise', 
           <ol className="oefeningOL">
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+            <li className="orderedListItem">Ga op je rug liggen en plaats jouw handen onder je onderrug</li>
+            <li className="orderedListItem">Til je benen van de grond en houw je knie&euml;n iets gebogen</li>
+            <li className="orderedListItem">Til je benen totdat ze zijn gestrekt boven je heupen en laat ze gecontroleerd zakken naar de startpositie</li>  
           </ol>, 
-          'https://www.youtube.com/embed/l4kQd9eWclE?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=l4kQd9eWclE',
+          'https://www.youtube.com/embed/l4kQd9eWclE?rel=0&start=7&modestbranding=1&loop=1&iv_load_policy=3&playlist=l4kQd9eWclE',
           3, 
           10],
           [
             'De jackknife', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+              <li className="orderedListItem">Ga op je rug liggen op een comfortabel oppervlak</li>
+              <li className="orderedListItem">Hef je benen met gebogen knie&euml;n van de grond en strek je armen uit naar achteren</li>
+              <li className="orderedListItem">Strek je benen en breng daarna je knie&euml;n en armen naar elkaar toe</li>  
+              <li className="orderedListItem">Beweeg gecontroleerd terug naar de startpositie</li>  
             </ol>, 
-            'https://www.youtube.com/embed/CWOZyf8kaH0?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=CWOZyf8kaH0',
+            'https://www.youtube.com/embed/CWOZyf8kaH0?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=CWOZyf8kaH0',
             3, 
             10],
-           [
+            [
               'De crunch', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
+                <li className="orderedListItem">Ga op je rug liggen en plaats je voeten voor je op de grond met gebogen knie&euml;n</li>
+                <li className="orderedListItem">Plaats je handen op je achterhoofd en hef je bovenlichaam zonder dat je onderrug van de vloer komt</li>
+                <li className="orderedListItem">Laat je lichaam gecontroleerd zakken naar de startpositie</li>  
               </ol>, 
-              'https://www.youtube.com/embed/geenhiHju-o?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=geenhiHju-o',
+              'https://www.youtube.com/embed/MKmrqcoCZ-M?rel=0&start=20&modestbranding=1&loop=1&iv_load_policy=3&playlist=MKmrqcoCZ-M',
               3, 
               10]
 
@@ -418,38 +427,26 @@ class Resultaat extends React.Component {
        ,
 
        benen: [
-       [
+        [
           'De squat', 
           <ol className="oefeningOL">
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>
-            <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn</li>  
+            <li className="orderedListItem">Ga rechtop staan met je voeten op schouderbreedte</li>
+            <li className="orderedListItem">Zak gecontroleerd naar beneden alsof je in een stoel plaats neemt</li>
+            <li className="orderedListItem">Houdt je lichaam recht en strek je benen om terug te komen in de startpositie</li>  
           </ol>, 
-          'https://www.youtube.com/embed/UXJrBgI2RxA?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=UXJrBgI2RxA',
+          'https://www.youtube.com/embed/UXJrBgI2RxA?rel=0&start=37&modestbranding=1&loop=1&iv_load_policy=3&playlist=UXJrBgI2RxA',
           3, 
           10],
-        [
+          [
             'De lunge', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>
-              <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_1</li>  
+              <li className="orderedListItem">Ga rechtop staan met je voeten op schouderbreedte</li>
+              <li className="orderedListItem">Neem een grote stap naar voren en laat je lichaam zakken totdat je knie op de hoogte van je tenen is</li>
+              <li className="orderedListItem">Stap weer naar achter om in de startpositie te eindigen</li>  
             </ol>, 
-            'https://www.youtube.com/embed/COKYKgQ8KR0?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=COKYKgQ8KR0',
+            'https://www.youtube.com/embed/COKYKgQ8KR0?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=COKYKgQ8KR0',
             3, 
-            10],
-         [
-              'De wall sit', 
-              <ol className="oefeningOL">
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>
-                <li className="orderedListItem">Oefeningen een en twee zijn Oefeningen een en twee zijn Oefeningen een en twee zijn_2</li>  
-              </ol>, 
-              'https://www.youtube.com/embed/vDf2Bfb6SOg?rel=0&modestbranding=1&loop=1&iv_load_policy=3&playlist=vDf2Bfb6SOg',
-              3, 
-              10]
-
-      
+            10]
        ]
         
       },

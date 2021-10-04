@@ -8,6 +8,12 @@ html {
     border: 2px solid white;
 }
 
+ol > p {
+    color: rgb(94 217 255);
+    font-weight: normal;
+    position: relative;
+}
+
 .iframeWidth {
     width: 80%;
     display: flex;
