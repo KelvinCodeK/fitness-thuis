@@ -15,7 +15,7 @@ ol > p {
 }
 
 .iframeWidth {
-    width: 80%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,8 +81,8 @@ div.ytp-title-text {
 
 .gezondheid {
     width: 80%;
-    color: rgb(94 217 255);
-    font-size: calc(6px + 1vmin);
+    color: #ed9c44;
+    font-size: calc(7px + 1.3vmin);
     font-weight: initial;
 }
 

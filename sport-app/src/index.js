@@ -39,6 +39,7 @@ class Index extends React.Component {
     this.next = this.next.bind(this);
     this.dumbells = this.dumbells.bind(this);
     this.loadEnd = this.loadEnd.bind(this);
+    this.toStorageResult = this.toStorageResult.bind(this);
   }
 
   home() {
@@ -146,10 +147,16 @@ class Index extends React.Component {
   loadEnd() {
     this.setState({loadStart: 0});
   }
+
+  toStorageResult() {
+    const spiergroepenString = localStorage.getItem('spiergroepen');
+    const spiergroepenArray = spiergroepenString.split(',');
+    this.setState({spiergroepenToResultaat: true, dumbells: localStorage.getItem('dumbells'), energyPara: localStorage.getItem('currentEnergy'), spiergroepen: spiergroepenArray});
+  }
   
   render() {
     return (<div>
-      {this.state.introToEnergy || this.state.energyToSpiergroepen || this.state.spiergroepenToResultaat ? null : <Intro toEnergy={this.toEnergy} />}
+      {this.state.introToEnergy || this.state.energyToSpiergroepen || this.state.spiergroepenToResultaat ? null : <Intro toStorageResult={this.toStorageResult} toEnergy={this.toEnergy} />}
       {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
       {this.state.energyToSpiergroepen ? <Spiergroepen dumbells={this.dumbells} spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
       {this.state.spiergroepenToResultaat ? <Resultaat  loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}

@@ -34,7 +34,7 @@ class Intro extends React.Component {
       <p>
         Bekijk jouw meest recente oefeningen!
       </p>
-      <button className="introButtonTwee">
+      <button onClick={this.props.toStorageResult} className="introButtonTwee">
         recent
       </button>
       </section>

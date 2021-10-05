@@ -4,7 +4,11 @@ import './Resultaat.css';
 
 class Resultaat extends React.Component {
     
-
+  componentDidMount() {
+    localStorage.setItem('dumbells', this.props.dumbells);
+    localStorage.setItem('currentEnergy', this.props.currentEnergy);
+    localStorage.setItem('spiergroepen', this.props.spiergroepen);
+  }
 
   oefeningNaam(item) {
     if( this.props.dumbells === "ja" ) {
@@ -61,10 +65,6 @@ class Resultaat extends React.Component {
     }
     const herhalingArr = [sets, reps];
     return herhalingArr;
-  }
-
- test() {
-    console.log('hoi');
   }
 
   render() {
