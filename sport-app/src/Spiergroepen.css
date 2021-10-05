@@ -20,7 +20,7 @@ label {
 }
 
 label {
-    font-size: calc(10px + 1.3vmin);
+    font-size: calc(10px + 1.2vmin);
 }
 
 input[type="checkbox"  i] {
@@ -34,6 +34,9 @@ input[type="checkbox"  i] {
 input[type="radio" i] {
     height: calc(10px + 1vmin);
     width: calc(10px + 1vmin);
+    margin: 0px;
+    margin-right: calc(2px + 1vmin);
+    cursor: pointer;
 }
 
 .dumbell {
