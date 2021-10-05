@@ -1,5 +1,6 @@
 {
   "name": "sport-app",
+  "homepage": "https://fitness-thuis.nl",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

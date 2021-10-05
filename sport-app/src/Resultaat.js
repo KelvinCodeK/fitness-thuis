@@ -163,7 +163,7 @@ class Resultaat extends React.Component {
           [
             'De dumbell row', 
             <ol className="oefeningOL">
-              <li className="orderedListItem">Plaats je knie hand op een verhoogd oppervlak zoals je bed</li>
+              <li className="orderedListItem">Plaats je knie en je hand op een verhoogd oppervlak zoals je bed</li>
               <li className="orderedListItem">Pak het gewicht met &eacute;&eacute;n arm op en hef je elleboog boven je rug</li>
               <li className="orderedListItem">Laat het gewicht gecontroleerd zakken naar de startpositie</li>  
             </ol>, 
@@ -208,7 +208,7 @@ class Resultaat extends React.Component {
               'De leg raise', 
               <ol className="oefeningOL">
                 <li className="orderedListItem">Ga op je rug liggen en plaats je handen onder je onderrug</li>
-                <li className="orderedListItem">Til je benen van de grond en houw je knie&euml;n iets gebogen</li>
+                <li className="orderedListItem">Til je benen van de grond en hou je knie&euml;n iets gebogen</li>
                 <li className="orderedListItem">Til je benen totdat ze zijn gestrekt boven je heupen en laat ze gecontroleerd zakken naar de startpositie</li>  
               </ol>, 
               'https://www.youtube.com/embed/l4kQd9eWclE?rel=0&start=7&modestbranding=1&loop=1&iv_load_policy=3&playlist=l4kQd9eWclE',
@@ -251,7 +251,7 @@ class Resultaat extends React.Component {
               'De lunge', 
               <ol className="oefeningOL">
                 <li className="orderedListItem">Ga rechtop staan met je voeten op schouderbreedte</li>
-                <li className="orderedListItem">Neem een grote stap naar voren en laat je lichaam zakken totdat je knie op de hoogte van je tenen is</li>
+                <li className="orderedListItem">Neem een grote stap naar voren en laat je lichaam zakken totdat je voorste knie op de hoogte van je tenen is</li>
                 <li className="orderedListItem">Stap weer naar achter om in de startpositie te eindigen</li>  
               </ol>, 
               'https://www.youtube.com/embed/COKYKgQ8KR0?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=COKYKgQ8KR0',
@@ -379,7 +379,7 @@ class Resultaat extends React.Component {
             'De leg raise', 
             <ol className="oefeningOL">
               <li className="orderedListItem">Ga op je rug liggen en plaats je handen onder je onderrug</li>
-              <li className="orderedListItem">Til je benen van de grond en houw je knie&euml;n iets gebogen</li>
+              <li className="orderedListItem">Til je benen van de grond en hou je knie&euml;n iets gebogen</li>
               <li className="orderedListItem">Til je benen totdat ze zijn gestrekt boven je heupen en laat ze gecontroleerd zakken naar de startpositie</li>  
             </ol>, 
             'https://www.youtube.com/embed/l4kQd9eWclE?rel=0&start=7&modestbranding=1&loop=1&iv_load_policy=3&playlist=l4kQd9eWclE',
@@ -422,7 +422,7 @@ class Resultaat extends React.Component {
             'De lunge', 
             <ol className="oefeningOL">
               <li className="orderedListItem">Ga rechtop staan met je voeten op schouderbreedte</li>
-              <li className="orderedListItem">Neem een grote stap naar voren en laat je lichaam zakken totdat je knie op de hoogte van je tenen is</li>
+              <li className="orderedListItem">Neem een grote stap naar voren en laat je lichaam zakken totdat je voorste knie op de hoogte van je tenen is</li>
               <li className="orderedListItem">Stap weer naar achter om in de startpositie te eindigen</li>  
             </ol>, 
             'https://www.youtube.com/embed/COKYKgQ8KR0?rel=0&start=22&modestbranding=1&loop=1&iv_load_policy=3&playlist=COKYKgQ8KR0',

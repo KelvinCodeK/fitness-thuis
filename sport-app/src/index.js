@@ -149,9 +149,14 @@ class Index extends React.Component {
   }
 
   toStorageResult() {
-    const spiergroepenString = localStorage.getItem('spiergroepen');
-    const spiergroepenArray = spiergroepenString.split(',');
-    this.setState({spiergroepenToResultaat: true, dumbells: localStorage.getItem('dumbells'), energyPara: localStorage.getItem('currentEnergy'), spiergroepen: spiergroepenArray});
+    if(!localStorage.getItem('spiergroepen')){
+      alert('Er zijn geen automatisch opgeslagen oefeningen gevonden. Klik op "start" voor nieuwe oefeningen');
+    }
+    else {
+      const spiergroepenString = localStorage.getItem('spiergroepen');
+      const spiergroepenArray = spiergroepenString.split(',');
+      this.setState({spiergroepenToResultaat: true, dumbells: localStorage.getItem('dumbells'), energyPara: localStorage.getItem('currentEnergy'), spiergroepen: spiergroepenArray});
+    }
   }
   
   render() {
