@@ -36,7 +36,7 @@ h1 {
 
 p {
   color: black;
-  font-size: calc(10px + 1.2vmin);
+  font-size: calc(8px + 1.35vmin);
   text-align: center;
   font-weight: bold;
 }

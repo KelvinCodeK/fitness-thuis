@@ -8,10 +8,6 @@
     animation-delay: 0.7s;
 }
 
-label {
-    color: white;
-}
-
 .checkboxContainer {
     height: calc(130px + 15vmin);
     display: flex;
@@ -20,7 +16,8 @@ label {
 }
 
 label {
-    font-size: calc(10px + 1.2vmin);
+    font-size: calc(8px + 1.35vmin);
+    color: white;
 }
 
 input[type="checkbox"  i] {
