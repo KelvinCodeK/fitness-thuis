@@ -283,13 +283,13 @@ class Resultaat extends React.Component {
               3, 
               10],
             [
-              'De lateral raise', 
+              'De side plank raise', 
               <ol className="oefeningOL">
-                <li className="orderedListItem">Ga rechtop staan en houdt de gewichten naast je lichaam met licht gebogen elleboog en voeten op schouderbreedte</li>
-                <li className="orderedListItem">Til de gewichten tot nek hoogte horizontaal naast je lichaam</li>
-                <li className="orderedListItem">Laat de gewichten gecontroleerd zakken tot de start positie</li>  
+                <li className="orderedListItem">Ga gestrekt op je zij liggen op een stevig en comfortabel oppervlak</li>
+                <li className="orderedListItem">Gebruik je schouder en je core om je lichaam op te heffen</li>
+                <li className="orderedListItem">Zak gecontroleerd terug naar de startpositie</li>  
               </ol>, 
-              'https://www.youtube.com/embed/geenhiHju-o?rel=0&start=20&modestbranding=1&loop=1&iv_load_policy=3&playlist=geenhiHju-o',
+              'https://www.youtube.com/embed/bADuvN8O-Ng?rel=0&start=9&modestbranding=1&loop=1&iv_load_policy=3&playlist=bADuvN8O-Ng',
               3, 
               10]
           ],
