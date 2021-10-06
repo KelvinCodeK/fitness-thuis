@@ -1,51 +1,11 @@
 html {
     scroll-behavior: smooth;
-  }
+}
 
 .home {
     position:fixed;
     z-index: 1;
     border: 2px solid white;
-}
-
-ol > p {
-    color: rgb(94 217 255);
-    font-weight: normal;
-    position: relative;
-}
-
-.iframeWidth {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.loadingInitial {
-    position: absolute;
-    z-index: -1;
-    font-size: calc(7px + 1.3vmin);
-}
-
-.iframeContainer {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0px;
-
-}
-
-iframe {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-div.ytp-title-text {
-    font-size: 10px !important;
 }
 
 .oefeningen {
@@ -55,40 +15,14 @@ div.ytp-title-text {
     align-items: center;
 }
 
-.oefening > .introButtonEen {
-    opacity: 1;
-    animation: none;
-    margin: 0px;
-}
-
-.andereOefening {
-    color: white;
-    font-weight: normal;
-
-    border-top: 1px solid white;
-    padding: 3px;
-}
-
-.oefeningUitleg, .oefeningenIntro {
-    color: white;
-    font-weight: initial;
+.oefeningen > p {
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .oefening {
     margin: 2em;
     width: 90%;
-}
-
-.gezondheid {
-    width: 80%;
-    color: #ed9c44;
-    font-size: calc(7px + 1.3vmin);
-    font-weight: initial;
-}
-
-.oefeningen > p {
-    margin-left: 2em;
-    margin-right: 2em;
 }
 
 ul {
@@ -117,19 +51,14 @@ li {
     padding: 3px;
 }
 
-
-
-.oefeningOL {
-    flex-direction: column;
-    border: none;
-    padding: 0px;
+a {
+    text-decoration: inherit;
+    color: inherit;
+    margin: 0.5em;
 }
 
-.orderedListItem {
-
-    color: white;
-    margin-left: 5em;
-    margin-right: 5em;
+.oefeningPara {
+    font-size: calc(6px + 1vmin);
 }
 
 h2 {
@@ -145,14 +74,57 @@ h3 {
     font-size: calc(8px + 2vmin);
 }
 
-a {
-    text-decoration: inherit;
-    color: inherit;
-    margin: 0.5em;
+.iframeWidth {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.oefeningPara {
-    font-size: calc(6px + 1vmin);
+.iframeContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0px;
+
+}
+
+iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.loadingInitial {
+    position: absolute;
+    z-index: -1;
+    font-size: calc(7px + 1.3vmin);
+}
+
+.oefeningUitleg, .oefeningenIntro {
+    color: white;
+    font-weight: initial;
+}
+
+.oefeningOL {
+    flex-direction: column;
+    border: none;
+    padding: 0px;
+}
+
+.orderedListItem {
+    color: white;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+ol > p {
+    color: rgb(94 217 255);
+    font-weight: normal;
+    position: relative;
 }
 
 .herhalingen {
@@ -170,6 +142,27 @@ a {
     color: white;
     font-weight: normal;
     margin: 0px;
+}
+
+.andereOefening {
+    color: white;
+    font-weight: normal;
+
+    border-top: 1px solid white;
+    padding: 3px;
+}
+
+.oefening > .introButtonEen {
+    opacity: 1;
+    animation: none;
+    margin: 0px;
+}
+
+.gezondheid {
+    width: 80%;
+    color: #ed9c44;
+    font-size: calc(7px + 1.3vmin);
+    font-weight: initial;
 }
 
 @media only screen and (min-width: 800px) {

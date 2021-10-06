@@ -1,7 +1,6 @@
 import React from 'react';
 import './Energy.css';
 
-
 class Energy extends React.Component {
 
   render() {
@@ -17,7 +16,7 @@ class Energy extends React.Component {
         </h1>
         <p>
         Ideale thuisoefeningen geselecteerd op inspanning en spiergroepen
-      </p>
+        </p>
       </div>
       </header>
       <main className="centeredSection">

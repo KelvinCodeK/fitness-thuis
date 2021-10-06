@@ -50,13 +50,16 @@ p {
 .headerText {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-end;
+}
+
+header p {
+  font-size: calc(7px + 1.2vmin);
 }
 
 .introButtonEen, .introButtonTwee {
   background: linear-gradient(326deg, #ea0000, rgb(94 217 255));
-  margin-top: calc(1px + 6vmin);
+  margin-top: calc(1px + 4vmin);
   height: calc(25px + 4vmin);
   width: calc(45px + 8vmin);
   font-size: calc(6px + 1.5vmin);
@@ -98,10 +101,6 @@ p {
   }
 }
 
-header p {
-  font-size: calc(7px + 1.2vmin);
-}
-
 section {
   display: flex;
   flex-direction: column;
@@ -114,7 +113,6 @@ section {
   border-left: 6px solid #d8d5d5;
   position: relative;
   border-radius: 13px;
-  padding: 0.2em;
   margin-right: calc(15px + 15vmin);
 }
 
@@ -123,7 +121,6 @@ section {
   border-left: 6px solid #d8d5d5;
   position: relative;
   border-radius: 13px;
-  padding: 0.2em;
   margin-right: calc(15px + 15vmin);
 }
 
@@ -206,7 +203,7 @@ section {
 @media only screen and (min-width: 800px) {
 
   .introButtonEen, .introButtonTwee {
-    margin-top: calc(5px + 9vmin);
+    margin-top: calc(5px + 6vmin);
   }
 
   .fullPage {

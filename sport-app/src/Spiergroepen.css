@@ -1,18 +1,11 @@
 .dumbellPara, .spiergroepenPara {
     border-left: 1px solid white;
-    padding: 3px;
     border-bottom: 1px solid white;
+    padding: 3px;
 }
 
 .spiergroepenPara {
-    animation-delay: 0.7s;
-}
-
-.checkboxContainer {
-    height: calc(130px + 15vmin);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    animation-delay: 0.75s;
 }
 
 label {
@@ -20,12 +13,16 @@ label {
     color: white;
 }
 
-input[type="checkbox"  i] {
-    height: calc(10px + 1vmin);
-    width: calc(10px + 1vmin);
-    margin: 0px;
-    margin-right: calc(2px + 1vmin);
-    cursor: pointer;
+.dumbellDiv {
+    display: flex;
+    align-items: center;
+}
+
+.dumbell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(85px + 7vmin);
 }
 
 input[type="radio" i] {
@@ -36,21 +33,22 @@ input[type="radio" i] {
     cursor: pointer;
 }
 
-.dumbell {
+.checkboxContainer {
+    height: calc(130px + 15vmin);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: calc(85px + 7vmin);
-}
-
-.dumbellDiv {
-
-    display: flex;
-
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .checkboxDiv {
     display: flex;
     align-items: center;
+}
+
+input[type="checkbox"  i] {
+    height: calc(10px + 1vmin);
+    width: calc(10px + 1vmin);
+    margin: 0px;
+    margin-right: calc(2px + 1vmin);
+    cursor: pointer;
 }

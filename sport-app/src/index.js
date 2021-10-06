@@ -69,7 +69,6 @@ class Index extends React.Component {
   }
 
   toResultaat() {
-
     if (this.state.dumbells && this.state.spiergroepen[0]) {
       this.setState({energyToSpiergroepen: false, spiergroepenToResultaat: true});
     }
@@ -79,7 +78,6 @@ class Index extends React.Component {
     else {
       alert('Kies spiergroep(en) om te trainen en ga daarna verder.');
     }
-
   }
 
   spiergroepenChecked(event) {
@@ -101,7 +99,6 @@ class Index extends React.Component {
 
   energy(event) {
     const level = Number(event.target.value);
-    
     switch(true) {
     case level <= 50 && level >= 0:
       this.setState({energyLevel: veryTired});
@@ -126,7 +123,7 @@ class Index extends React.Component {
     default:
       this.setState({energyLevel: neutral});
       this.setState({energyPara: 'prima'});
-  }
+    }
   }
 
   next(event) {

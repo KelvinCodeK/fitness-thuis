@@ -1,6 +1,5 @@
 import React from 'react';
 import './Intro.css';
-// voor yt vids gebruik dit kanaal > https://www.youtube.com/watch?v=6ZJbSZNe370&ab_channel=Sportzorg
 
 class Intro extends React.Component {
 
@@ -39,7 +38,6 @@ class Intro extends React.Component {
       </button>
       </section>
       <section className="image">
-
       </section>
     </div>
   );}
