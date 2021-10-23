@@ -1,15 +1,22 @@
 import React from 'react';
 import './Energy.css';
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
 class Energy extends React.Component {
 
   render() {
   return (
+    <Router>
     <div>
       <header>
+      <Link to="/">
       <button onClick={this.props.home} className="home">
       home
       </button>
+      </Link>
       <div className="headerText">
         <h1>
           Fitnessoefeningen voor thuis
@@ -31,6 +38,7 @@ class Energy extends React.Component {
         <button onClick={this.props.energyToSpiergroepen} className="introButtonEen">next</button>
       </main>
     </div>
+    </Router>
   );}
 }
 

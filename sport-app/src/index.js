@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import './index.css';
 import Intro from './Intro';
 import Energy from './Energy';
@@ -10,8 +15,8 @@ import tired from './images/tired.png';
 import neutral from './images/neutral.png';
 import goodEnergy from './images/goodEnergy.png';
 import highEnergy from './images/highEnergy.png';
-//test
-class Index extends React.Component {
+
+export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -157,12 +162,26 @@ class Index extends React.Component {
   }
   
   render() {
-    return (<div>
-      {this.state.introToEnergy || this.state.energyToSpiergroepen || this.state.spiergroepenToResultaat ? null : <Intro toStorageResult={this.toStorageResult} toEnergy={this.toEnergy} />}
-      {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
-      {this.state.energyToSpiergroepen ? <Spiergroepen dumbells={this.dumbells} spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
-      {this.state.spiergroepenToResultaat ? <Resultaat  loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}
+    return (
+
+      // Lijkt er op dat je altijd de Link op dezelfde pagina als de Switch moet hebben. Vanaf de Index de Intro inladen en dan in elk component de Link en Switch etc. verwerken. Veel methods worden erdoor overbodig
+      // ook Props worden overbodig en Sate waarden. Zorg ook dat de grootte van de Link <a> niet groter dan de button is. Denk ook aan het resetten van de juiste states, wat bij een terugklik moet gebeuren`
+      // > op het inladen van bijv spiergroepen component standaard de states vanuit de voorgaande componenten verwijderen.
+    <Router>
+      <div>
+
+
+
+          {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null }
+
+  
+            <Intro toStorageResult={this.toStorageResult} toEnergy={this.toEnergy} />
+
+        {this.state.energyToSpiergroepen ? <Spiergroepen dumbells={this.dumbells} spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
+        {this.state.spiergroepenToResultaat ? <Resultaat  loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}
+
       </div>
+    </Router>
     )
   }
 }

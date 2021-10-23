@@ -1,5 +1,9 @@
 import React from 'react';
 import './Resultaat.css';
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
 
 class Resultaat extends React.Component {
@@ -433,6 +437,7 @@ class Resultaat extends React.Component {
   }
 
   return (
+    <Router>
     <div className="result">
       <header>
         <button onClick={this.props.home} className="home">
@@ -484,6 +489,7 @@ class Resultaat extends React.Component {
           </p>
       </main>
     </div>
+    </Router>
   );}
 }
 

@@ -1,10 +1,15 @@
 import React from 'react';
 import './Spiergroepen.css';
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
 class Spiergroepen extends React.Component {
 
   render() {
   return (
+    <Router>
     <div>
       <header>
         <button onClick={this.props.home} className="home">
@@ -68,6 +73,7 @@ class Spiergroepen extends React.Component {
         <button onClick={this.props.spiergroepenToResultaat}className="introButtonEen">finish</button>
       </main>
     </div>
+    </Router>
   );}
 }
 
