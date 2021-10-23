@@ -36,6 +36,7 @@ export default class Index extends React.Component {
      loadStart: 0
     }
     this.energy = this.energy.bind(this);
+    this.resetEnergy = this.resetEnergy.bind(this);
     this.toEnergy = this.toEnergy.bind(this);
     this.home = this.home.bind(this);
     this.toSpiergroepen = this.toSpiergroepen.bind(this);
@@ -63,6 +64,14 @@ export default class Index extends React.Component {
       buikspieren: 0,
       benen: 0,
       loadStart: 0});
+  }
+// reset on component did mount
+  resetEnergy() {
+    this.setState({
+      energyLevel: neutral,
+      energyPara: 'prima'});
+   
+
   }
 
   toEnergy() {
@@ -162,26 +171,26 @@ export default class Index extends React.Component {
   }
   
   render() {
-    return (
+
 
       // Lijkt er op dat je altijd de Link op dezelfde pagina als de Switch moet hebben. Vanaf de Index de Intro inladen en dan in elk component de Link en Switch etc. verwerken. Veel methods worden erdoor overbodig
       // ook Props worden overbodig en Sate waarden. Zorg ook dat de grootte van de Link <a> niet groter dan de button is. Denk ook aan het resetten van de juiste states, wat bij een terugklik moet gebeuren`
       // > op het inladen van bijv spiergroepen component standaard de states vanuit de voorgaande componenten verwijderen.
-    <Router>
-      <div>
+      return (<Router><div>
+        <Switch>
+          <Route exact path="/">
+            <Intro resetEnergy={this.resetEnergy} toStorageResult={this.toStorageResult} toEnergy={this.toEnergy} />
+          </Route>
+            <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} />
+          <Route>
 
-
-
-          {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null }
-
-  
-            <Intro toStorageResult={this.toStorageResult} toEnergy={this.toEnergy} />
-
+          </Route>
+        </Switch>
+        
         {this.state.energyToSpiergroepen ? <Spiergroepen dumbells={this.dumbells} spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
         {this.state.spiergroepenToResultaat ? <Resultaat  loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}
-
-      </div>
-    </Router>
+        </div>
+        </Router>
     )
   }
 }

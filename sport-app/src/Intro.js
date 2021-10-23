@@ -10,10 +10,15 @@ import Index from './index';
 import Energy from './Energy';
 
 class Intro extends React.Component {
+  componentDidMount() {
+    this.props.resetEnergy();
+  }
 
   render() {
+
+
   return (
-    <Router>
+
       <div className="fullPage">
         <header>
         <Link to="/">
@@ -56,11 +61,11 @@ class Intro extends React.Component {
         </section>
 
         <Switch>
-        <Route path="/energie"  /> 
+        <Route path="/energie" component={Index} /> 
 
         </Switch>
       </div>
-    </Router>
+
   );}
 }
 
