@@ -1,13 +1,6 @@
 import React from 'react';
 import './Intro.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Index from './index';
-import Energy from './Energy';
+import {Link} from "react-router-dom";
 
 class Intro extends React.Component {
   componentDidMount() {
@@ -40,9 +33,9 @@ class Intro extends React.Component {
         <p>
           Opzoek naar nieuwe oefeningen waarmee jij vandaag het beste uit jezelf haalt?
         </p>
-        <Link onClick={this.props.toEnergy} to="/energie">
-        <button  className="introButtonEen">
-          start
+        <Link to="/energie">
+        <button className="introButtonEen" onClick={this.props.toEnergy}>
+        start
         </button>
         </Link>
         </section>
@@ -51,19 +44,14 @@ class Intro extends React.Component {
         <p>
           Bekijk jouw meest recente oefeningen!
         </p>
-        <Link to="/oefeningen">
+        
         <button onClick={this.props.toStorageResult} className="introButtonTwee">
-          recent
+        <Link to="/oefeningen">recent</Link>
         </button>
-        </Link>
+       
         </section>
         <section className="image">
         </section>
-
-        <Switch>
-        <Route path="/energie" component={Index} /> 
-
-        </Switch>
       </div>
 
   );}

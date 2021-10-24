@@ -1,11 +1,6 @@
 import React from 'react';
 import './Resultaat.css';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
-
-
+import {Link} from "react-router-dom";
 class Resultaat extends React.Component {
     
   componentDidMount() {
@@ -437,12 +432,14 @@ class Resultaat extends React.Component {
   }
 
   return (
-    <Router>
+
     <div className="result">
       <header>
-        <button onClick={this.props.home} className="home">
-          home
-        </button>
+      <Link to="/">
+      <button onClick={this.props.home} className="home">
+      home
+      </button>
+      </Link>
         <div className="headerText">
           <h1>
             Fitnessoefeningen voor thuis
@@ -489,7 +486,7 @@ class Resultaat extends React.Component {
           </p>
       </main>
     </div>
-    </Router>
+
   );}
 }
 

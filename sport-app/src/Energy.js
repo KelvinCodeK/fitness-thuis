@@ -1,15 +1,11 @@
 import React from 'react';
 import './Energy.css';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
-
+import {Link} from "react-router-dom";
 class Energy extends React.Component {
 
   render() {
   return (
-    <Router>
+
     <div>
       <header>
       <Link to="/">
@@ -35,10 +31,12 @@ class Energy extends React.Component {
         <span className="forFirefox"><input type={"range"} min={0} max={400} defaultValue={200} step={10} onChange={this.props.energyLevel} className="slider" /></span>
         </div>
         <p className="niveau">Niveau: <span>{this.props.currentEnergy}</span></p>
-        <button onClick={this.props.energyToSpiergroepen} className="introButtonEen">next</button>
+        
+        <button onClick={this.props.energyToSpiergroepen} className="introButtonEen"><Link to="/spiergroepen">next</Link></button>
+        
       </main>
     </div>
-    </Router>
+
   );}
 }
 

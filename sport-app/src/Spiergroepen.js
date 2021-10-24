@@ -1,20 +1,18 @@
 import React from 'react';
 import './Spiergroepen.css';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
-
+import {Link} from "react-router-dom";
 class Spiergroepen extends React.Component {
 
   render() {
   return (
-    <Router>
+
     <div>
       <header>
-        <button onClick={this.props.home} className="home">
-          home
-        </button>
+      <Link to="/">
+      <button onClick={this.props.home} className="home">
+      home
+      </button>
+      </Link>
         <div className="headerText">
           <h1>
             Fitnessoefeningen voor thuis
@@ -70,10 +68,13 @@ class Spiergroepen extends React.Component {
               <input onChange={this.props.spiergroepenChecked} type="checkbox" id="benen" value="benen" />
               <label htmlFor="benen">Benen</label></div>
         </div>
-        <button onClick={this.props.spiergroepenToResultaat}className="introButtonEen">finish</button>
+        {/* conditional Link */}
+        
+        <button onClick={this.props.spiergroepenToResultaat}className="introButtonEen">{this.props.dumbellsCheck && this.props.spiergroepenCheck[0] ? <Link to="/oefeningen">finish</Link> : 'finish' }</button>
+        
       </main>
     </div>
-    </Router>
+
   );}
 }
 
