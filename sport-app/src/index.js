@@ -32,7 +32,6 @@ export default class Index extends React.Component {
      benen: 0,
      loadStart: 0
     }
-
     this.energy = this.energy.bind(this);
     this.resetAll = this.resetAll.bind(this);
     this.resetSpiergroepen = this.resetSpiergroepen.bind(this);
@@ -76,8 +75,6 @@ export default class Index extends React.Component {
       loadStart: 0
     })
   }
-
-
 
   toResultaat() {
     if (this.state.dumbells && this.state.spiergroepen[0]) {
@@ -182,7 +179,7 @@ export default class Index extends React.Component {
               <Energy resetAll={this.resetAll} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} />
             </Route>
             <Route path="/spiergroepen">
-              <Spiergroepen resetSpiergroepen={this.resetSpiergroepen} dumbells={this.dumbells} dumbellsCheck={this.state.dumbells} spiergroepenCheck={this.state.spiergroepen} spiergroepenChecked={this.spiergroepenChecked} resetAll={this.resetAll}/>
+              <Spiergroepen toResultaat={this.toResultaat} resetSpiergroepen={this.resetSpiergroepen} dumbells={this.dumbells} dumbellsCheck={this.state.dumbells} spiergroepenCheck={this.state.spiergroepen} spiergroepenChecked={this.spiergroepenChecked} resetAll={this.resetAll}/>
             </Route>
             <Route path="/oefeningen">
               <Resultaat reloadOefeningen={this.reloadOefeningen} loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} resetAll={this.resetAll} />
@@ -193,9 +190,9 @@ export default class Index extends React.Component {
           </Switch>
           </div>
         </Router>
-    )
+      )
+    }
   }
-}
 
 ReactDOM.render(
   <React.StrictMode>

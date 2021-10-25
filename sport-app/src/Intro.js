@@ -8,15 +8,12 @@ class Intro extends React.Component {
   }
 
   render() {
-
-
   return (
-
       <div className="fullPage">
         <header>
         <Link to="/">
           <button className="homeIntro">
-          home
+            home
           </button>
         </Link>
         <div className="headerText">
@@ -53,7 +50,6 @@ class Intro extends React.Component {
         <section className="image">
         </section>
       </div>
-
   );}
 }
 

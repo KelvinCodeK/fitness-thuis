@@ -7,7 +7,7 @@ class Resultaat extends React.Component {
     if(!this.props.spiergroepen[0]) {
       this.props.reloadOefeningen();
     }
-    if(!localStorage.getItem('dumbells')) {
+    else {
       localStorage.setItem('dumbells', this.props.dumbells);
       localStorage.setItem('currentEnergy', this.props.currentEnergy);
       localStorage.setItem('spiergroepen', this.props.spiergroepen);
@@ -437,7 +437,6 @@ class Resultaat extends React.Component {
   }
 
   return (
-
     <div className="result">
       <header>
       <Link to="/">
@@ -491,7 +490,6 @@ class Resultaat extends React.Component {
           </p>
       </main>
     </div>
-
   );}
 }
 

@@ -12,9 +12,9 @@ class Spiergroepen extends React.Component {
     <div>
       <header>
       <Link to="/">
-      <button onClick={this.props.resetAll} className="home">
-      home
-      </button>
+        <button onClick={this.props.resetAll} className="home">
+          home
+        </button>
       </Link>
         <div className="headerText">
           <h1>
@@ -71,10 +71,9 @@ class Spiergroepen extends React.Component {
               <input onChange={this.props.spiergroepenChecked} type="checkbox" id="benen" value="benen" />
               <label htmlFor="benen">Benen</label></div>
         </div>
-        {this.props.dumbellsCheck && this.props.spiergroepenCheck[0] ? <Link to="/oefeningen"><button className="introButtonEen">finish</button></Link> : <button className="introButtonEen">finish</button>}
+        {this.props.dumbellsCheck && this.props.spiergroepenCheck[0] ? <Link to="/oefeningen"><button className="introButtonEen" onClick={this.props.toResultaat}>finish</button></Link> : <button className="introButtonEen" onClick={this.props.toResultaat}>finish</button>}
       </main>
     </div>
-
   );}
 }
 

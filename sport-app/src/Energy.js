@@ -12,16 +12,16 @@ class Energy extends React.Component {
     <div>
       <header>
       <Link to="/">
-      <button onClick={this.props.resetAll} className="home">
-      home
-      </button>
+        <button onClick={this.props.resetAll} className="home">
+          home
+        </button>
       </Link>
       <div className="headerText">
         <h1>
           Fitnessoefeningen voor thuis
         </h1>
         <p>
-        Ideale thuisoefeningen geselecteerd op inspanning en spiergroepen
+         Ideale thuisoefeningen geselecteerd op inspanning en spiergroepen
         </p>
       </div>
       </header>
@@ -37,10 +37,8 @@ class Energy extends React.Component {
         <Link to="/spiergroepen">
           <button className="introButtonEen">next</button>
         </Link>
-        
       </main>
     </div>
-
   );}
 }
 
