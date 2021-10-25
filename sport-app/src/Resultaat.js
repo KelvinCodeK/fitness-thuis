@@ -4,9 +4,14 @@ import {Link} from "react-router-dom";
 class Resultaat extends React.Component {
     
   componentDidMount() {
-    localStorage.setItem('dumbells', this.props.dumbells);
-    localStorage.setItem('currentEnergy', this.props.currentEnergy);
-    localStorage.setItem('spiergroepen', this.props.spiergroepen);
+    if(!this.props.spiergroepen[0]) {
+      this.props.reloadOefeningen();
+    }
+    if(!localStorage.getItem('dumbells')) {
+      localStorage.setItem('dumbells', this.props.dumbells);
+      localStorage.setItem('currentEnergy', this.props.currentEnergy);
+      localStorage.setItem('spiergroepen', this.props.spiergroepen);
+    }
   }
 
   oefeningNaam(item) {
@@ -436,7 +441,7 @@ class Resultaat extends React.Component {
     <div className="result">
       <header>
       <Link to="/">
-      <button onClick={this.props.home} className="home">
+      <button onClick={this.props.resetAll} className="home">
       home
       </button>
       </Link>

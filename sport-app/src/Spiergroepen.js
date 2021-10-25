@@ -3,13 +3,16 @@ import './Spiergroepen.css';
 import {Link} from "react-router-dom";
 class Spiergroepen extends React.Component {
 
+  componentDidMount() {
+    this.props.resetSpiergroepen();
+  }
+
   render() {
   return (
-
     <div>
       <header>
       <Link to="/">
-      <button onClick={this.props.home} className="home">
+      <button onClick={this.props.resetAll} className="home">
       home
       </button>
       </Link>
@@ -68,10 +71,7 @@ class Spiergroepen extends React.Component {
               <input onChange={this.props.spiergroepenChecked} type="checkbox" id="benen" value="benen" />
               <label htmlFor="benen">Benen</label></div>
         </div>
-        {/* conditional Link */}
-        
-        <button onClick={this.props.spiergroepenToResultaat}className="introButtonEen">{this.props.dumbellsCheck && this.props.spiergroepenCheck[0] ? <Link to="/oefeningen">finish</Link> : 'finish' }</button>
-        
+        {this.props.dumbellsCheck && this.props.spiergroepenCheck[0] ? <Link to="/oefeningen"><button className="introButtonEen">finish</button></Link> : <button className="introButtonEen">finish</button>}
       </main>
     </div>
 

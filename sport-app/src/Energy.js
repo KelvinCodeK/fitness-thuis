@@ -3,13 +3,16 @@ import './Energy.css';
 import {Link} from "react-router-dom";
 class Energy extends React.Component {
 
+  componentDidMount() {
+    this.props.resetAll();
+  }
+
   render() {
   return (
-
     <div>
       <header>
       <Link to="/">
-      <button onClick={this.props.home} className="home">
+      <button onClick={this.props.resetAll} className="home">
       home
       </button>
       </Link>
@@ -31,8 +34,9 @@ class Energy extends React.Component {
         <span className="forFirefox"><input type={"range"} min={0} max={400} defaultValue={200} step={10} onChange={this.props.energyLevel} className="slider" /></span>
         </div>
         <p className="niveau">Niveau: <span>{this.props.currentEnergy}</span></p>
-        
-        <button onClick={this.props.energyToSpiergroepen} className="introButtonEen"><Link to="/spiergroepen">next</Link></button>
+        <Link to="/spiergroepen">
+          <button className="introButtonEen">next</button>
+        </Link>
         
       </main>
     </div>

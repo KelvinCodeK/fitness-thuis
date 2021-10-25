@@ -20,9 +20,6 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-     introToEnergy: false,
-     energyToSpiergroepen: false,
-     spiergroepenToResultaat: false,
      energyLevel: neutral,
      energyPara: 'prima',
      spiergroepen: [],
@@ -35,20 +32,20 @@ export default class Index extends React.Component {
      benen: 0,
      loadStart: 0
     }
+
     this.energy = this.energy.bind(this);
-    this.resetEnergy = this.resetEnergy.bind(this);
-    this.toEnergy = this.toEnergy.bind(this);
-    this.home = this.home.bind(this);
-    this.toSpiergroepen = this.toSpiergroepen.bind(this);
+    this.resetAll = this.resetAll.bind(this);
+    this.resetSpiergroepen = this.resetSpiergroepen.bind(this);
     this.spiergroepenChecked = this.spiergroepenChecked.bind(this);
-    this.toResultaat = this.toResultaat.bind(this);
     this.next = this.next.bind(this);
     this.dumbells = this.dumbells.bind(this);
     this.loadEnd = this.loadEnd.bind(this);
+    this.toResultaat = this.toResultaat.bind(this);
     this.toStorageResult = this.toStorageResult.bind(this);
+    this.reloadOefeningen = this.reloadOefeningen.bind(this);
   }
 
-  home() {
+  resetAll() {
     this.setState({
       introToEnergy: false,
       energyToSpiergroepen: false,
@@ -65,21 +62,22 @@ export default class Index extends React.Component {
       benen: 0,
       loadStart: 0});
   }
-// reset on component did mount
-  resetEnergy() {
-    this.setState({
-      energyLevel: neutral,
-      energyPara: 'prima'});
-   
+
+  resetSpiergroepen() {
+    this.setState( {
+      spiergroepen: [],
+      dumbells: null,
+      schouders: 0,
+      borst: 0,
+      rug: 0,
+      armen: 0,
+      buikspieren: 0,
+      benen: 0,
+      loadStart: 0
+    })
   }
 
-  toEnergy() {
-    this.setState({introToEnergy: true});
-  }
 
-  toSpiergroepen() {
-    this.setState({introToEnergy: false, energyToSpiergroepen: true});
-  }
 
   toResultaat() {
     if (this.state.dumbells && this.state.spiergroepen[0]) {
@@ -168,29 +166,29 @@ export default class Index extends React.Component {
       this.setState({spiergroepenToResultaat: true, dumbells: localStorage.getItem('dumbells'), energyPara: localStorage.getItem('currentEnergy'), spiergroepen: spiergroepenArray});
     }
   }
+
+  reloadOefeningen() {
+    const spiergroepenString = localStorage.getItem('spiergroepen');
+    const spiergroepenArray = spiergroepenString.split(',');
+    this.setState({spiergroepenToResultaat: true, dumbells: localStorage.getItem('dumbells'), energyPara: localStorage.getItem('currentEnergy'), spiergroepen: spiergroepenArray});
+  }
   
   render() {
-
-
-// Veel methods worden erdoor overbodig
-      // ook Props worden overbodig en Sate waarden. Zorg ook dat de grootte van de Link <a> niet groter dan de button is. Denk ook aan het resetten van de juiste states, wat bij een terugklik moet gebeuren`
-      // > op het inladen van bijv spiergroepen component standaard de states vanuit de voorgaande componenten verwijderen.
-      // component inladen bij spiergroepen op basis van wel of niet ingevuld moet nog worden gefixed
       return (
         <Router>
           <div>
           <Switch>
             <Route path="/energie">
-            <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} />
+              <Energy resetAll={this.resetAll} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} />
             </Route>
             <Route path="/spiergroepen">
-            <Spiergroepen dumbells={this.dumbells} dumbellsCheck={this.state.dumbells} spiergroepenCheck={this.state.spiergroepen} spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/>
+              <Spiergroepen resetSpiergroepen={this.resetSpiergroepen} dumbells={this.dumbells} dumbellsCheck={this.state.dumbells} spiergroepenCheck={this.state.spiergroepen} spiergroepenChecked={this.spiergroepenChecked} resetAll={this.resetAll}/>
             </Route>
             <Route path="/oefeningen">
-            <Resultaat  loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} />
+              <Resultaat reloadOefeningen={this.reloadOefeningen} loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} resetAll={this.resetAll} />
             </Route>
             <Route exact path="/">
-              <Intro resetEnergy={this.resetEnergy} toStorageResult={this.toStorageResult} toEnergy={this.toEnergy} />
+              <Intro resetAll={this.resetAll} toStorageResult={this.toStorageResult}/>
             </Route> 
           </Switch>
           </div>

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 class Intro extends React.Component {
   componentDidMount() {
-    this.props.resetEnergy();
+    this.props.resetAll();
   }
 
   render() {
@@ -33,8 +33,8 @@ class Intro extends React.Component {
         <p>
           Opzoek naar nieuwe oefeningen waarmee jij vandaag het beste uit jezelf haalt?
         </p>
-        <Link to="/energie">
-        <button className="introButtonEen" onClick={this.props.toEnergy}>
+        <Link className="introButtonMarge" to="/energie">
+        <button className="introButtonEen">
         start
         </button>
         </Link>
@@ -44,11 +44,11 @@ class Intro extends React.Component {
         <p>
           Bekijk jouw meest recente oefeningen!
         </p>
-        
-        <button onClick={this.props.toStorageResult} className="introButtonTwee">
-        <Link to="/oefeningen">recent</Link>
-        </button>
-       
+        <Link className="introButtonMarge" to="/oefeningen">
+          <button onClick={this.props.toStorageResult} className="introButtonTwee">
+            recent
+          </button>
+        </Link>
         </section>
         <section className="image">
         </section>

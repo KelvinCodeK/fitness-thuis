@@ -111,7 +111,7 @@ span {
   content: "";
 }
 
-.centeredSection > button{
+.centeredSection button {
   opacity: 1;
   animation: none;
   margin: 0px;
