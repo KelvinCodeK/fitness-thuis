@@ -1,13 +1,17 @@
 import React from 'react';
 import './Resultaat.css';
-
-
+import {Link} from "react-router-dom";
 class Resultaat extends React.Component {
     
   componentDidMount() {
-    localStorage.setItem('dumbells', this.props.dumbells);
-    localStorage.setItem('currentEnergy', this.props.currentEnergy);
-    localStorage.setItem('spiergroepen', this.props.spiergroepen);
+    if(!this.props.spiergroepen[0]) {
+      this.props.reloadOefeningen();
+    }
+    if(!localStorage.getItem('dumbells')) {
+      localStorage.setItem('dumbells', this.props.dumbells);
+      localStorage.setItem('currentEnergy', this.props.currentEnergy);
+      localStorage.setItem('spiergroepen', this.props.spiergroepen);
+    }
   }
 
   oefeningNaam(item) {
@@ -433,11 +437,14 @@ class Resultaat extends React.Component {
   }
 
   return (
+
     <div className="result">
       <header>
-        <button onClick={this.props.home} className="home">
-          home
-        </button>
+      <Link to="/">
+      <button onClick={this.props.resetAll} className="home">
+      home
+      </button>
+      </Link>
         <div className="headerText">
           <h1>
             Fitnessoefeningen voor thuis
@@ -484,6 +491,7 @@ class Resultaat extends React.Component {
           </p>
       </main>
     </div>
+
   );}
 }
 

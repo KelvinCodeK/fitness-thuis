@@ -59,7 +59,6 @@ header p {
 
 .introButtonEen, .introButtonTwee {
   background: linear-gradient(326deg, #ea0000, rgb(94 217 255));
-  margin-top: calc(1px + 4vmin);
   height: calc(25px + 4vmin);
   width: calc(45px + 8vmin);
   font-size: calc(6px + 1.5vmin);
@@ -71,12 +70,16 @@ header p {
   border: 2px solid #d8d5d5;
   cursor: pointer;
   transition: all 0.1s ease;
-  margin-bottom: 2vmin;
   opacity: 0;
   animation-name: buttonsOpacity;
   animation-duration: 1.8s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
+
+.introButtonMarge {
+  margin-top: calc(1px + 4vmin);
+  margin-bottom: 2vmin;
 }
 
 .introButtonTwee {
@@ -202,7 +205,7 @@ section {
 
 @media only screen and (min-width: 800px) {
 
-  .introButtonEen, .introButtonTwee {
+  .introButtonMarge {
     margin-top: calc(5px + 6vmin);
   }
 

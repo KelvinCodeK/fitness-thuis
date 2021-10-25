@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import './index.css';
 import Intro from './Intro';
 import Energy from './Energy';
@@ -11,13 +16,10 @@ import neutral from './images/neutral.png';
 import goodEnergy from './images/goodEnergy.png';
 import highEnergy from './images/highEnergy.png';
 
-class Index extends React.Component {
+export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-     introToEnergy: false,
-     energyToSpiergroepen: false,
-     spiergroepenToResultaat: false,
      energyLevel: neutral,
      energyPara: 'prima',
      spiergroepen: [],
@@ -30,19 +32,20 @@ class Index extends React.Component {
      benen: 0,
      loadStart: 0
     }
+
     this.energy = this.energy.bind(this);
-    this.toEnergy = this.toEnergy.bind(this);
-    this.home = this.home.bind(this);
-    this.toSpiergroepen = this.toSpiergroepen.bind(this);
+    this.resetAll = this.resetAll.bind(this);
+    this.resetSpiergroepen = this.resetSpiergroepen.bind(this);
     this.spiergroepenChecked = this.spiergroepenChecked.bind(this);
-    this.toResultaat = this.toResultaat.bind(this);
     this.next = this.next.bind(this);
     this.dumbells = this.dumbells.bind(this);
     this.loadEnd = this.loadEnd.bind(this);
+    this.toResultaat = this.toResultaat.bind(this);
     this.toStorageResult = this.toStorageResult.bind(this);
+    this.reloadOefeningen = this.reloadOefeningen.bind(this);
   }
 
-  home() {
+  resetAll() {
     this.setState({
       introToEnergy: false,
       energyToSpiergroepen: false,
@@ -60,13 +63,21 @@ class Index extends React.Component {
       loadStart: 0});
   }
 
-  toEnergy() {
-    this.setState({introToEnergy: true});
+  resetSpiergroepen() {
+    this.setState( {
+      spiergroepen: [],
+      dumbells: null,
+      schouders: 0,
+      borst: 0,
+      rug: 0,
+      armen: 0,
+      buikspieren: 0,
+      benen: 0,
+      loadStart: 0
+    })
   }
 
-  toSpiergroepen() {
-    this.setState({introToEnergy: false, energyToSpiergroepen: true});
-  }
+
 
   toResultaat() {
     if (this.state.dumbells && this.state.spiergroepen[0]) {
@@ -155,14 +166,33 @@ class Index extends React.Component {
       this.setState({spiergroepenToResultaat: true, dumbells: localStorage.getItem('dumbells'), energyPara: localStorage.getItem('currentEnergy'), spiergroepen: spiergroepenArray});
     }
   }
+
+  reloadOefeningen() {
+    const spiergroepenString = localStorage.getItem('spiergroepen');
+    const spiergroepenArray = spiergroepenString.split(',');
+    this.setState({spiergroepenToResultaat: true, dumbells: localStorage.getItem('dumbells'), energyPara: localStorage.getItem('currentEnergy'), spiergroepen: spiergroepenArray});
+  }
   
   render() {
-    return (<div>
-      {this.state.introToEnergy || this.state.energyToSpiergroepen || this.state.spiergroepenToResultaat ? null : <Intro toStorageResult={this.toStorageResult} toEnergy={this.toEnergy} />}
-      {this.state.introToEnergy ? <Energy energyToSpiergroepen={this.toSpiergroepen} home={this.home} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} /> : null}
-      {this.state.energyToSpiergroepen ? <Spiergroepen dumbells={this.dumbells} spiergroepenToResultaat={this.toResultaat} spiergroepenChecked={this.spiergroepenChecked} home={this.home}/> : null}
-      {this.state.spiergroepenToResultaat ? <Resultaat  loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} home={this.home} /> : null}
-      </div>
+      return (
+        <Router>
+          <div>
+          <Switch>
+            <Route path="/energie">
+              <Energy resetAll={this.resetAll} energySmiley={this.state.energyLevel} currentEnergy={this.state.energyPara} energyLevel={this.energy} />
+            </Route>
+            <Route path="/spiergroepen">
+              <Spiergroepen resetSpiergroepen={this.resetSpiergroepen} dumbells={this.dumbells} dumbellsCheck={this.state.dumbells} spiergroepenCheck={this.state.spiergroepen} spiergroepenChecked={this.spiergroepenChecked} resetAll={this.resetAll}/>
+            </Route>
+            <Route path="/oefeningen">
+              <Resultaat reloadOefeningen={this.reloadOefeningen} loading={this.state.loadStart} loadEnd={this.loadEnd} benen={this.state.benen} buikspieren={this.state.buikspieren} armen={this.state.armen} borst={this.state.borst} rug={this.state.rug} schouders={this.state.schouders} dumbells={this.state.dumbells} nextOefening={this.next} currentEnergy={this.state.energyPara} spiergroepen={this.state.spiergroepen} resetAll={this.resetAll} />
+            </Route>
+            <Route exact path="/">
+              <Intro resetAll={this.resetAll} toStorageResult={this.toStorageResult}/>
+            </Route> 
+          </Switch>
+          </div>
+        </Router>
     )
   }
 }
