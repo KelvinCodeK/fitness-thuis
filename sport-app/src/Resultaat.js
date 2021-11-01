@@ -468,8 +468,8 @@ class Resultaat extends React.Component {
                 <h2 key={`${x + 4}`}>{x}</h2>
                 <h3 key={`${x + 5}`} className="oefeningUitleg"><span key={`${x + 6}`} >{this.oefeningNaam(x)}</span></h3>
                 <div key={`${x + 7}`} className="iframeWidth"> <span className="loadingInitial">laden...</span>{this.props.loading === 1 ? <span style={{textShadow: '2px 2px black', position: 'absolute', zIndex: '1', padding: '5px', borderRadius: '5px', border: '1px solid white', backgroundColor: '#505056'}}>laden...</span> : null}
-                <div key={`${x + 8}`} className="iframeContainer"> 
-                <iframe onLoad={this.props.loadEnd} key={`${x + 9}`} src={this.src(x)} title="YouTube fitnessoefening voor thuis" frameBorder="0"></iframe>
+                <div key={`${x + 8}`} className="iframeContainer">
+                <iframe onLoad={this.props.loadEnd} key={this.oefeningNaam(x)} src={this.src(x)} title="YouTube fitnessoefening voor thuis" frameBorder="0"></iframe>
                 </div>
                 </div>
                 {this.ol(x)}
